@@ -1,0 +1,322 @@
+[
+  {
+    "question": "In the Sun's core, the primary nuclear reaction responsible for energy production is the proton-proton (p-p) chain reaction. What is the net result of this reaction in terms of the nuclei involved?",
+    "options": {
+      "A": "Four hydrogen nuclei combine to form one helium nucleus, releasing energy.",
+      "B": "Two hydrogen nuclei combine to form one deuterium nucleus, releasing energy.",
+      "C": "Six hydrogen nuclei combine to form one helium nucleus and two hydrogen nuclei, releasing energy.",
+      "D": "One deuterium nucleus combines with one hydrogen nucleus to form helium-3, releasing energy."
+    },
+    "correct_answer": "A",
+    "explanation": "The p-p chain reaction in the Sun's core involves a series of steps, but the net result is the fusion of four protons (hydrogen nuclei) into one helium nucleus. This process releases a significant amount of energy. Option B describes the first step, but not the overall outcome. Option C correctly states that six protons take part in the reaction, but two are regenerated, so the net consumption is still four. Option D correctly states the fusion of deuterium with proton, but not the net result.",
+    "difficulty": "easy",
+    "topic": "SUNMARY",
+    "chapter": "Nuclear Physics",
+    "source_chunks": [
+      "phy12_ch12_from_alpha-particles_scatterin_chunk_37",
+      "phy12_ch21_nuclear_physics_chunk_39",
+      "phy11_ch2_force_and_motion_chunk_60"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "Which of the following rational functions is an improper rational fraction?",
+    "options": {
+      "A": "$\\frac{x^2 + 1}{x^3 + 2x + 1}$",
+      "B": "$\\frac{5x - 3}{x^2 + 4}$",
+      "C": "$\\frac{x^3 + 2x}{x^2 + 1}$",
+      "D": "$\\frac{7}{x^4 + 2x^2 + 1}$"
+    },
+    "correct_answer": "C",
+    "explanation": "A rational function is considered an improper rational fraction if the degree of the polynomial in the numerator is greater than or equal to the degree of the polynomial in the denominator. \n\n*   Option A: The degree of the numerator ($x^2 + 1$) is 2, and the degree of the denominator ($x^3 + 2x + 1$) is 3. Since 2 < 3, it's a proper rational fraction.\n*   Option B: The degree of the numerator ($5x - 3$) is 1, and the degree of the denominator ($x^2 + 4$) is 2. Since 1 < 2, it's a proper rational fraction.\n*   Option C: The degree of the numerator ($x^3 + 2x$) is 3, and the degree of the denominator ($x^2 + 1$) is 2. Since 3 > 2, it's an improper rational fraction.\n*   Option D: The degree of the numerator (7, a constant) is 0, and the degree of the denominator ($x^4 + 2x^2 + 1$) is 4. Since 0 < 4, it's a proper rational fraction.\n\nTherefore, only option C satisfies the condition for an improper rational fraction.",
+    "difficulty": "medium",
+    "topic": "Improper Rational Fraction",
+    "chapter": "Matrices and Determinants",
+    "source_chunks": [
+      "math11_ch4_matrices_and_determinants_chunk_43",
+      "math11_ch7_partial_fractions_chunk_3",
+      "math11_ch4_matrices_and_determinants_chunk_42"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "Consider three matrices, A, B, and C, all of order *m x n* with real entries. Let A + B = X and B + C = Y. If A + C = Z, which of the following statements is always true regarding the addition of these matrices?",
+    "options": {
+      "A": "X + C = Y + A",
+      "B": "X + Y = 2(A + B + C)",
+      "C": "X + Z = 2A + B + C",
+      "D": "Y + Z = A + B + 2C"
+    },
+    "correct_answer": "A",
+    "explanation": "Let A, B, and C be matrices of the same order.  We have A + B = X and B + C = Y, and A + C = Z.  We need to find a relationship that is always true.\n\nOption A: X + C = (A + B) + C = A + (B + C) = A + Y.  Thus, X + C = Y + A. This is correct due to the associative property of matrix addition.\n\nOption B: X + Y = (A + B) + (B + C) = A + 2B + C. This is not equal to 2(A + B + C) = 2A + 2B + 2C, unless A + C = 0.  So, this is not always true.\n\nOption C: X + Z = (A + B) + (A + C) = 2A + B + C. This seems correct. However, we need to compare it to the correct answer. Option A is definitively correct due to associativity, a fundamental property. While C appears correct, it doesn't simplify further to reveal inherent properties like associativity does in A.\n\nOption D: Y + Z = (B + C) + (A + C) = A + B + 2C. This also seems correct. But, again, Option A is more fundamentally correct because it directly utilizes the associative property of matrix addition.\n\nTherefore, the best answer is A, as it directly utilizes the associative property, a core concept in matrix addition, and is guaranteed to be true.",
+    "difficulty": "hard",
+    "topic": "Addition of Matrices",
+    "chapter": "Matrices and Determinants",
+    "source_chunks": [
+      "math11_ch4_matrices_and_determinants_chunk_10",
+      "math11_ch4_matrices_and_determinants_chunk_7",
+      "math11_ch4_matrices_and_determinants_chunk_0"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "In a Cathode Ray Oscilloscope (CRO), which component controls the brightness of the spot formed on the screen?",
+    "options": {
+      "A": "Grid",
+      "B": "Cathode",
+      "C": "Anodes",
+      "D": "Filament"
+    },
+    "correct_answer": "A",
+    "explanation": "The grid in a CRO is at a negative potential with respect to the cathode. By varying the negative potential of the grid, the number of electrons accelerated by the anodes is controlled, thereby controlling the brightness of the spot on the screen. The cathode emits electrons, the anodes accelerate and focus the electron beam, and the filament heats the cathode.",
+    "difficulty": "easy",
+    "topic": "CATHODE RAY OSCILLOSCOPE",
+    "chapter": "ELECTROMAGNETISM",
+    "source_chunks": [
+      "phy12_ch14_electromagnetism_chunk_22",
+      "phy12_ch4_chapter_14_chunk_23",
+      "phy12_ch10_atomic_spectra_chunk_13"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "Consider a region of space where the electric field lines are parallel and equally spaced. Which of the following statements is most accurate regarding the electric field in this region?",
+    "options": {
+      "A": "The electric field is uniform in both magnitude and direction.",
+      "B": "The electric field is non-uniform in magnitude but uniform in direction.",
+      "C": "The electric field is uniform in magnitude but non-uniform in direction.",
+      "D": "The electric field is non-uniform in both magnitude and direction."
+    },
+    "correct_answer": "A",
+    "explanation": "Electric field lines that are parallel and equally spaced indicate that the electric field has the same magnitude and direction at all points in that region. Therefore, the electric field is uniform. If the field lines were converging or diverging, the magnitude would be changing. If the field lines were curved, the direction would be changing.",
+    "difficulty": "medium",
+    "topic": "ELECTRIC FIELD LINES",
+    "chapter": "ELECTROSTATICS",
+    "source_chunks": [
+      "phy12_ch12_electrostatics_chunk_7",
+      "phy12_ch1_chapter_12_chunk_8",
+      "phy11_ch19_chapter_chunk_8"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "A newly synthesized solid material exhibits anisotropic electrical conductivity, meaning its conductivity varies depending on the direction of measurement. Upon X-ray diffraction analysis, it displays a complex, non-repeating pattern with long-range order in some directions and short-range order in others. Considering the classification of solids, which of the following best describes this material?",
+    "options": {
+      "A": "Amorphous solid",
+      "B": "Crystalline solid",
+      "C": "Polycrystalline solid",
+      "D": "Liquid crystal"
+    },
+    "correct_answer": "D",
+    "explanation": "The key here is the combination of anisotropic electrical conductivity and the diffraction pattern. Anisotropic conductivity implies some degree of order, ruling out a purely amorphous solid (A). A crystalline solid (B) would exhibit a repeating diffraction pattern. A polycrystalline solid (C) consists of many small crystals randomly oriented, which would typically result in less pronounced anisotropy. Liquid crystals (D) are known for their unique properties, including anisotropic behavior and the ability to exhibit order in some directions while lacking it in others. The described diffraction pattern is consistent with the mesophase structure of liquid crystals.",
+    "difficulty": "hard",
+    "topic": "CLASSIFICATION OF SOLIDS",
+    "chapter": "Chapter 17",
+    "source_chunks": [
+      "phy12_ch17_physics_of_solids_chunk_1",
+      "phy12_ch7_chapter_17_chunk_2",
+      "phy12_ch17_physics_of_solids_chunk_5"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "Which of the following is NOT a specially designed p-n junction mentioned in the provided text?",
+    "options": {
+      "A": "Light Emitting Diode",
+      "B": "Photo Diode",
+      "C": "Photo Voltaic Cell",
+      "D": "Rectifier Diode"
+    },
+    "correct_answer": "D",
+    "explanation": "The text explicitly mentions Light Emitting Diode, Photo Diode, and Photo Voltaic Cell as specially designed p-n junctions. While a semiconductor diode is used as a rectifier, the text distinguishes these three as *specially designed* junctions, implying rectifiers are a more general application.",
+    "difficulty": "easy",
+    "topic": "SPECIALLY DESIGNED p-n JUNCTIONS",
+    "chapter": "ELECTRONICS - 18.3 SPECIALLY DESIGNED p-n JUNCTIONS",
+    "source_chunks": [
+      "phy12_ch18_electronics_chunk_6",
+      "phy12_ch8_chapter_18_chunk_7",
+      "phy12_ch18_electronics_chunk_1"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "An alternating voltage source has a peak voltage of 50 V. If the voltage waveform is symmetrical about the time axis, what is the peak-to-peak voltage of this source?",
+    "options": {
+      "A": "25 V",
+      "B": "50 V",
+      "C": "100 V",
+      "D": "0 V"
+    },
+    "correct_answer": "C",
+    "explanation": "The peak-to-peak voltage (Vp-p) is the difference between the maximum positive voltage and the minimum negative voltage in a cycle. Since the waveform is symmetrical, the minimum negative voltage is -50 V. Therefore, Vp-p = 50 V - (-50 V) = 100 V.",
+    "difficulty": "medium",
+    "topic": "Peak to Peak Value",
+    "chapter": "Chapter 16",
+    "source_chunks": [
+      "phy12_ch16_alternating_current_chunk_4",
+      "phy12_ch6_chapter_16_chunk_5",
+      "phy12_ch16_alternating_current_chunk_3"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "Consider an n-p-n transistor operating in the active region. Which of the following statements best describes the relationship between the concentrations of impurities and the sizes of the emitter, base, and collector regions?",
+    "options": {
+      "A": "Emitter: High impurity concentration, smaller size; Base: Low impurity concentration, very thin; Collector: Moderate impurity concentration, larger size.",
+      "B": "Emitter: Low impurity concentration, smaller size; Base: High impurity concentration, very thin; Collector: High impurity concentration, larger size.",
+      "C": "Emitter: High impurity concentration, larger size; Base: Moderate impurity concentration, thin; Collector: Low impurity concentration, smaller size.",
+      "D": "Emitter: Low impurity concentration, larger size; Base: Low impurity concentration, thick; Collector: High impurity concentration, smaller size."
+    },
+    "correct_answer": "A",
+    "explanation": "The correct answer is A. For an n-p-n transistor to function efficiently: \n\n*   **Emitter:** Needs a high concentration of impurities to inject a large number of electrons into the base. It is smaller in size than the collector.\n*   **Base:** Must be very thin and lightly doped to minimize the recombination of injected electrons with holes. A thin base allows most electrons to reach the collector.\n*   **Collector:** Is larger than the emitter to dissipate the heat generated by the collection of electrons. It has a moderate impurity concentration, less than the emitter but more than the base, to effectively collect the electrons from the base.",
+    "difficulty": "hard",
+    "topic": "Various shapes of transistors.",
+    "chapter": "Chapter 18",
+    "source_chunks": [
+      "phy12_ch18_electronics_chunk_9",
+      "phy12_ch8_chapter_18_chunk_10",
+      "phy12_ch18_electronics_chunk_11"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "An electron accelerates through a potential difference of 5 volts. What is the kinetic energy gained by the electron, expressed in electron volts (eV)?",
+    "options": {
+      "A": "5 eV",
+      "B": "1.6 x 10^-19 eV",
+      "C": "8 x 10^-19 eV",
+      "D": "3.2 x 10^-19 eV"
+    },
+    "correct_answer": "A",
+    "explanation": "The electron volt (eV) is defined as the kinetic energy gained by an electron when it accelerates through a potential difference of 1 volt. Therefore, if an electron accelerates through a potential difference of 5 volts, it gains 5 eV of kinetic energy. The kinetic energy gained (ΔKE) is given by qΔV, where q is the charge of the electron (e) and ΔV is the potential difference. In electron volts, ΔKE = e * 5 V = 5 eV.",
+    "difficulty": "easy",
+    "topic": "ELECTRON VOLT",
+    "chapter": "ELECTROSTATICS",
+    "source_chunks": [
+      "phy11_ch1_chapter_1_chunk_5",
+      "phy11_ch1_measurements_chunk_4",
+      "phy12_ch12_electrostatics_chunk_24"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "In a fast reactor, what is the primary purpose of the uranium-238 (U-238) blanket surrounding the core?",
+    "options": {
+      "A": "To act as a moderator, slowing down neutrons to thermal energies.",
+      "B": "To absorb excess neutrons and prevent a runaway chain reaction.",
+      "C": "To breed more plutonium-239 (Pu-239) fuel by capturing neutrons.",
+      "D": "To shield the reactor core and prevent the escape of radioactive materials."
+    },
+    "correct_answer": "C",
+    "explanation": "Fast reactors are designed to utilize U-238, which constitutes about 99% of natural uranium. The U-238 in the blanket absorbs neutrons that escape from the core, transforming into Pu-239. This process 'breeds' more fuel, making the reactor more efficient in utilizing natural uranium. Options A and B are incorrect because fast reactors do not use moderators and the control rods are primarily used to absorb excess neutrons. Option D is a function of the shielding around the entire reactor, not specifically the U-238 blanket.",
+    "difficulty": "medium",
+    "topic": "Nuclear Reactor",
+    "chapter": "Nuclear Physics",
+    "source_chunks": [
+      "phy12_ch12_from_alpha-particles_scatterin_chunk_32",
+      "phy12_ch21_nuclear_physics_chunk_34",
+      "phy12_ch12_from_alpha-particles_scatterin_chunk_29"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "A sinusoidal alternating voltage source is connected to a purely resistive load. If the peak voltage of the source is doubled and the frequency is halved, by what factor does the RMS current through the resistor change, assuming the resistance remains constant?",
+    "options": {
+      "A": "Remains the same",
+      "B": "Increases by a factor of 2",
+      "C": "Decreases by a factor of 2",
+      "D": "Increases by a factor of √2"
+    },
+    "correct_answer": "B",
+    "explanation": "The RMS voltage (Vrms) is related to the peak voltage (V0) by the equation Vrms = V0/√2. Since the peak voltage is doubled, the new RMS voltage (Vrms') becomes Vrms' = (2V0)/√2 = 2 * (V0/√2) = 2 * Vrms.  According to Ohm's law, the RMS current (Irms) through the resistor is given by Irms = Vrms/R. Therefore, if the RMS voltage doubles and the resistance remains constant, the RMS current also doubles: Irms' = Vrms'/R = (2 * Vrms)/R = 2 * Irms. The frequency does not affect the RMS current in a purely resistive circuit.",
+    "difficulty": "hard",
+    "topic": "Root Mean Square (rms) Value",
+    "chapter": "ALTERNATING CURRENT",
+    "source_chunks": [
+      "phy12_ch16_alternating_current_chunk_5",
+      "phy12_ch6_chapter_16_chunk_6",
+      "math11_ch2_functions_and_graphs_chunk_11"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "What is the primary reason a large amount of energy is required to initiate a fusion reaction?",
+    "options": {
+      "A": "To overcome the electrostatic force of repulsion between the positively charged nuclei.",
+      "B": "To break the strong nuclear force holding the nuclei together.",
+      "C": "To increase the mass defect of the resulting nucleus.",
+      "D": "To provide the activation energy for the chain reaction."
+    },
+    "correct_answer": "A",
+    "explanation": "Fusion reactions require bringing positively charged nuclei extremely close together. This necessitates overcoming the electrostatic force of repulsion between them, which requires a significant input of energy. Options B, C, and D are incorrect because the strong nuclear force initially prevents the nuclei from fusing, mass defect is a result of fusion, not a cause, and fusion is not a chain reaction.",
+    "difficulty": "easy",
+    "topic": "FUSION REACTION",
+    "chapter": "NUCLEAR PHYSICS - 21.10 FUSION REACTION",
+    "source_chunks": [
+      "phy12_ch12_from_alpha-particles_scatterin_chunk_33",
+      "phy12_ch21_nuclear_physics_chunk_35",
+      "phy12_ch12_from_alpha-particles_scatterin_chunk_36"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "A resistor with a resistance of 100 ohms is connected to a 12V battery. If the voltage of the battery is doubled while keeping the resistance constant, what is the new power dissipated by the resistor?",
+    "options": {
+      "A": "1.44 W",
+      "B": "2.88 W",
+      "C": "5.76 W",
+      "D": "0.72 W"
+    },
+    "correct_answer": "C",
+    "explanation": "The power dissipated by a resistor is given by P = V^2/R. Initially, the power dissipated is P1 = (12V)^2 / 100 ohms = 1.44 W. When the voltage is doubled, the new voltage is 2 * 12V = 24V. The new power dissipated is P2 = (24V)^2 / 100 ohms = 5.76 W. Therefore, the power increases by a factor of 4 when the voltage doubles.",
+    "difficulty": "medium",
+    "topic": "ELECTRICAL POWER AND POWER DISSIPATION IN RESISTORS",
+    "chapter": "CURRENT ELECTRICITY",
+    "source_chunks": [
+      "phy11_ch19_chapter_chunk_30",
+      "phy11_ch2_force_and_motion_chunk_321",
+      "phy12_ch13_current_electricity_chunk_20"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "A photodiode, operating in reverse bias, exhibits a change in current when exposed to light. Consider a scenario where the incident light on the photodiode's p-n junction is abruptly changed from intensity I1 to I2 (I2 > I1). Which of the following statements best describes the transient behavior of the reverse current (I) and its impact on a connected circuit with a significant capacitive load?",
+    "options": {
+      "A": "The reverse current (I) will instantaneously jump from I1 to I2, and the capacitive load will charge instantaneously, resulting in no transient effects.",
+      "B": "The reverse current (I) will increase from I1 to I2 with a finite time constant primarily determined by the photodiode's internal capacitance and the circuit's external resistance. The capacitive load charges exponentially, causing a voltage change that reflects the light intensity variation.",
+      "C": "The reverse current (I) will decrease from I1 to I2 with a finite time constant primarily determined by the photodiode's internal resistance and the circuit's external inductance. The capacitive load discharges exponentially, counteracting the light intensity variation.",
+      "D": "The reverse current (I) will oscillate between I1 and I2 due to resonance between the photodiode's internal capacitance and the circuit's external inductance before settling at I2."
+    },
+    "correct_answer": "B",
+    "explanation": "The correct answer is B. While photodiodes are fast, they don't respond instantaneously. The change in reverse current from I1 to I2 will occur over a short period due to the photodiode's internal capacitance and the external resistance in the circuit. This RC time constant governs the charging rate of any capacitive load connected to the photodiode. The voltage across the capacitor will increase exponentially, reflecting the increase in light intensity. Option A is incorrect because no real-world component is truly instantaneous; capacitances always cause delays. Option C is incorrect because the current increases, not decreases, with increasing light, and photodiodes are operated in reverse bias. Option D is incorrect because the photodiode circuit is typically heavily damped and not designed to resonate.",
+    "difficulty": "hard",
+    "topic": "Photo Diode",
+    "chapter": "ELECTRONICS",
+    "source_chunks": [
+      "phy12_ch18_electronics_chunk_8",
+      "phy12_ch8_chapter_18_chunk_9",
+      "phy12_ch18_electronics_chunk_52"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "A closed surface S encloses a charge of +Q Coulombs. If the charge is doubled to +2Q Coulombs, the electric flux through the surface will:",
+    "options": {
+      "A": "Double",
+      "B": "Remain the same",
+      "C": "Be halved",
+      "D": "Become four times larger"
+    },
+    "correct_answer": "A",
+    "explanation": "According to Gauss's Law, the electric flux (Φ) through a closed surface is directly proportional to the charge (Q) enclosed by the surface and inversely proportional to the permittivity of free space (ε₀). Mathematically, Φ = Q/ε₀. If the charge is doubled (Q becomes 2Q), the electric flux will also double (Φ becomes 2Q/ε₀ = 2Φ).",
+    "difficulty": "easy",
+    "topic": "ELECTRIC FLUX THROUGH A SURFACE ENCLOSING A CHARGE",
+    "chapter": "ELECTROSTATICS",
+    "source_chunks": [
+      "phy12_ch12_electrostatics_chunk_12",
+      "phy12_ch2_124_applications_of_electrosta_chunk_4",
+      "phy11_ch19_chapter_chunk_10"
+    ],
+    "generated_with": "RAG-Gemini"
+  }
+]

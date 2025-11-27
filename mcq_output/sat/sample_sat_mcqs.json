@@ -1,0 +1,90 @@
+[
+  {
+    "question": "The passage primarily serves to:",
+    "options": {
+      "A": "criticize the Supreme Court's resistance to televising oral arguments.",
+      "B": "present two reasons for the Supreme Court's reluctance to televise oral arguments.",
+      "C": "argue that televising Supreme Court proceedings would lower the quality of discourse.",
+      "D": "suggest that the Supreme Court is out of touch with modern media consumption habits."
+    },
+    "correct_answer": "B",
+    "explanation": "The passage outlines two main concerns held by some Supreme Court justices regarding the televising of oral arguments: the temptation to perform for the cameras and the potential for misinterpretation due to viewers watching only short clips. This directly supports the idea that the passage is presenting two reasons for the Court's reluctance.",
+    "difficulty": "easy",
+    "question_type": "main_idea",
+    "section": "reading",
+    "passage_id": "test9_R&W_M1_q28_full",
+    "passage_content": "# SAT Test 9 - Question Q 28\n\n## Topic: General English Item\n## Source: Q 28\n\n## 28\n\nSome members of the US Supreme Court have resisted calls to televise the court's oral arguments, concerned that the participants would be tempted to perform for the cameras (and thus lower the quality of the discourse). $\\qquad$ the justices worry that most viewers would not even watch the full deliberations, only short clips that could be misinterpreted and mischaracterized.\n\nWhich choice completes the text with the most logical transition?\nA) However,\nB) Additionally,\nC) In comparison,\nD) For example,\n",
+    "generated_with": "RAG-Gemini-SAT"
+  },
+  {
+    "question": "The author's primary purpose in the first paragraph is to:",
+    "options": {
+      "A": "criticize judges for selectively citing philosophers who support their predetermined conclusions.",
+      "B": "highlight a potential weakness in judicial opinions and suggest a method for improvement.",
+      "C": "argue that judicial opinions should prioritize philosophical arguments over legal precedents.",
+      "D": "defend legal scholars who incorporate philosophical ideas into their analyses of judicial rulings."
+    },
+    "correct_answer": "B",
+    "explanation": "The author introduces Anita L. Allen's argument and then builds upon it by suggesting that considering conflicting philosophical views could strengthen judicial opinions. The paragraph focuses on identifying a potential flaw (judges citing only aligned philosophers) and offering a solution (considering opposing views). Thus, it highlights a weakness and suggests an improvement.",
+    "difficulty": "medium",
+    "question_type": "main_idea",
+    "section": "reading",
+    "passage_id": "test9_R&W_M1_q17_full",
+    "passage_content": "# SAT Test 9 - Question Q 17\n\n## Topic: General English Item\n## Source: Q 17\n\n## 17\n\nIn documents called judicial opinions, judges explain the reasoning behind their legal rulings, and in those explanations they sometimes cite and discuss historical and contemporary philosophers. Legal scholar and philosopher Anita L. Allen argues that while judges are naturally inclined to mention philosophers whose views align with their own positions, the strongest judicial opinions consider and rebut potential objections; discussing philosophers whose views conflict with judges' views could therefore $\\qquad$\nWhich choice most logically completes the text?\nA) allow judges to craft judicial opinions without needing to consult philosophical works.\nB) help judges improve the arguments they put forward in their judicial opinions.\nC) make judicial opinions more comprehensible to readers without legal or philosophical training.\nD) bring judicial opinions in line with views that are broadly held among philosophers.\n\nAlthough military veterans make up a small proportion of the total population of the United States, they occupy a significantly higher proportion of the jobs in the civilian government. One possible explanation for this disproportionate representation is that military service familiarizes people with certain organizational structures that are also reflected in the civilian government bureaucracy, and this familiarity thus $\\qquad$\nWhich choice most logically completes the text?\nA) makes civilian government jobs especially appealing to military veterans.\nB) alters the typical relationship between military service and subsequent career preferences.\nC) encourages nonveterans applying for civilian government jobs to consider military service instead.\nD) increases the number of civilian government jobs that require some amount of military experience to perform.\n",
+    "generated_with": "RAG-Gemini-SAT"
+  },
+  {
+    "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "underlined_text": "etc.) $\\qquad$ each emotional reaction that person has within a situation.",
+    "options": {
+      "A": "underlies",
+      "B": "is underlying",
+      "C": "underlie",
+      "D": "has been underlying"
+    },
+    "correct_answer": "A",
+    "explanation": "The subject of the verb is \"frameworks,\" which is plural. However, the clause is referring to how the frameworks impact *each* emotional reaction, therefore needing a singular verb form, which is 'underlies'.",
+    "difficulty": "easy",
+    "question_type": "grammar",
+    "section": "writing",
+    "passage_id": "test5_R&W_M1_q24_full",
+    "passage_content": "# SAT Test 5 - Question Q 24\n\n## Topic: General English Item\n## Source: Q 24\n\n## 24\n\nIn her 1983 book The Managed Heart:\nCommercialization of Human Feeling, sociologist Arlie Russell Hochschild first explored at length her conception of a \"sociology of emotions\"-the idea that the various cultural and ideological frameworks a person has internalized (class, gender, political affiliation, etc.) $\\qquad$ each emotional reaction that person has within a situation.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) underlies\nB) is underlying\nC) underlie\nD) has been underlying\n",
+    "generated_with": "RAG-Gemini-SAT"
+  },
+  {
+    "question": "Utah is home to Pando, a colony of about 47,000 quaking aspen trees that all share a single root system. Pando is one of the largest single organisms by mass on Earth, but ecologists are worried that its growth is declining in part because of grazing by animals. The ecologists say that strong fences could prevent deer from eating young trees and help Pando start thriving again.",
+    "underlined_text": "Earth, but ecologists are worried that its growth is declining in part because of grazing by animals.",
+    "options": {
+      "A": "NO CHANGE",
+      "B": "Earth, and ecologists worry that its growth is declining, in part, because animals are grazing on it.",
+      "C": "Earth, ecologists are worried that its growth is declining in part because of grazing by animals.",
+      "D": "Earth, but ecologists are worried about its declining growth because animals are grazing."
+    },
+    "correct_answer": "D",
+    "explanation": "Choice D is the most concise and grammatically sound. It eliminates the unnecessary phrase \"in part\" and flows more smoothly than the other options. A is grammatically correct but less concise. B is awkward and uses unnecessary commas. C creates a run-on sentence.",
+    "difficulty": "medium",
+    "question_type": "style",
+    "section": "writing",
+    "passage_id": "test9_R&W_M1_q9_full",
+    "passage_content": "# SAT Test 9 - Question Q 9\n\n## Topic: General English Item\n## Source: Q 9\n\n## 9\n\n## Text 1\n\nWhen companies in the same industry propose merging with one another, they often claim that the merger will benefit consumers by increasing efficiency and therefore lowering prices. Economist Ying Fan investigated this notion in the context of the United States newspaper market. She modeled a hypothetical merger of Minneapolis-area newspapers and found that subscription prices would rise following a merger.\n\n## Text 2\n\nEconomists Dario Focarelli and Fabio Panetta have argued that research on the effect of mergers on prices has focused excessively on short-term effects, which tend to be adverse for consumers. Using the case of consumer banking in Italy, they show that over the long term (several years, in their study), the efficiency gains realized by merged companies do result in economic benefits for consumers.\nBased on the texts, how would Focarelli and Panetta (Text 2) most likely respond to Fan's findings (Text 1)?\nA) They would recommend that Fan compare the near-term effect of a merger on subscription prices in the Minneapolis area with the effect of a merger in another newspaper market.\nB) They would argue that over the long term the expenses incurred by the merged newspaper company will also increase.\nC) They would encourage Fan to investigate whether the projected effect on subscription prices persists over an extended period.\nD) They would claim that mergers have a different effect on consumer prices in the newspaper industry than in most other industries.\n\nUtah is home to Pando, a colony of about 47,000 quaking aspen trees that all share a single root system. Pando is one of the largest single organisms by mass on Earth, but ecologists are worried that its growth is declining in part because of grazing by animals. The ecologists say that strong fences could prevent deer from eating young trees and help Pando start thriving again.\n\nAccording to the text, why are ecologists worried about Pando?\nA) It isn't growing at the same rate it used to.\nB) It isn't producing young trees anymore.\nC) It can't grow into new areas because it is blocked by fences.\nD) Its root system can't support many more new trees.\n",
+    "generated_with": "RAG-Gemini-SAT"
+  },
+  {
+    "question": "Which choice completes the text with the most logical and precise word or phrase?",
+    "underlined_text": "the migration's obligate nature is why diadromous fish can be $\\qquad$ those that are merely euryhaline (able to tolerate high salinity):",
+    "options": {
+      "A": "demarcated from",
+      "B": "distinguished from",
+      "C": "conflated with",
+      "D": "derived from"
+    },
+    "correct_answer": "B",
+    "explanation": "The sentence contrasts diadromous fish with euryhaline fish. 'Distinguished from' logically fits this contrast, indicating a clear difference between the two types of fish based on the obligate nature of their migration. 'Demarcated from' implies a defined boundary, which isn't the core of the comparison. 'Conflated with' means to combine, which is the opposite of what the sentence intends. 'Derived from' suggests origin, which is irrelevant to the comparison of migration habits.",
+    "difficulty": "hard",
+    "question_type": "style",
+    "section": "writing",
+    "passage_id": "test7_R&W_M1_q5_full",
+    "passage_content": "# SAT Test 7 - Question Q 5\n\n## Topic: General English Item\n## Source: Q 5\n\n## 5\n\nDiadromous fish migrate between freshwater and marine biomes during their life cycle. The migration's obligate nature is why diadromous fish can be $\\qquad$ those that are merely euryhaline (able to tolerate high salinity): the euryhaline blackchin tilapia can survive high salinity, but its life cycle does not involve relocation to a different biome, as does that of the diadromous wild salmon.\n\nWhich choice completes the text with the most logical and precise word or phrase?\nA) demarcated from\nB) reconstituted as\nC) conflated with\nD) derived from\n",
+    "generated_with": "RAG-Gemini-SAT"
+  }
+]

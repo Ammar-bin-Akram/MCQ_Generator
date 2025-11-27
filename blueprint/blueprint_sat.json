@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "sections": [
+      "English R/W Combined"
+    ]
+  },
+  "structure": {
+    "english_rw": {
+      "topics": [
+        "General English Item"
+      ],
+      "description": "All Reading and Writing items (Vocabulary, Grammar, Comprehension)"
+    }
+  },
+  "tests": {
+    "Test 10": {
+      "total_questions": 17,
+      "topics": [
+        "General English Item"
+      ]
+    },
+    "Test 4": {
+      "total_questions": 21,
+      "topics": [
+        "General English Item"
+      ]
+    },
+    "Test 5": {
+      "total_questions": 20,
+      "topics": [
+        "General English Item"
+      ]
+    },
+    "Test 6": {
+      "total_questions": 29,
+      "topics": [
+        "General English Item"
+      ]
+    },
+    "Test 7": {
+      "total_questions": 16,
+      "topics": [
+        "General English Item"
+      ]
+    },
+    "Test 8": {
+      "total_questions": 16,
+      "topics": [
+        "General English Item"
+      ]
+    },
+    "Test 9": {
+      "total_questions": 26,
+      "topics": [
+        "General English Item"
+      ]
+    }
+  }
+}

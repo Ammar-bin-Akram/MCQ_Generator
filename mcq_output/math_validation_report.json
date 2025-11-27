@@ -1,0 +1,31 @@
+{
+  "total_mcqs": 1,
+  "valid_mcqs": 1,
+  "invalid_mcqs": 0,
+  "pass_rate": 100.0,
+  "average_quality_score": 100.0,
+  "individual_reports": [
+    {
+      "topic": "Resolve the following into partial fractions:",
+      "difficulty": "easy",
+      "overall_valid": true,
+      "checks": {
+        "structure": {
+          "valid": true,
+          "issues": []
+        },
+        "quality": {
+          "score": 100,
+          "feedback": [
+            "Excellent quality!"
+          ],
+          "passed": true
+        },
+        "curriculum": {
+          "compliant": true,
+          "issues": []
+        }
+      }
+    }
+  ]
+}

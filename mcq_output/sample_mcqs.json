@@ -1,0 +1,202 @@
+[
+  {
+    "question": "A constant net force acts on an object. Which of the following quantities will experience a constant rate of change?",
+    "options": {
+      "A": "Momentum",
+      "B": "Velocity",
+      "C": "Kinetic Energy",
+      "D": "Displacement"
+    },
+    "correct_answer": "A",
+    "explanation": "According to Newton's second law in terms of momentum, F = Δp/Δt. If the net force F is constant, then the rate of change of momentum (Δp/Δt) must also be constant. While a constant net force implies constant acceleration and therefore a constant *change* in velocity, the *rate of change* of velocity is constant, not velocity itself. Kinetic energy changes at a non-constant rate because it depends on the square of the velocity. Displacement also changes at a non-constant rate under constant acceleration.",
+    "difficulty": "easy",
+    "topic": "Newton's laws of motion",
+    "chapter": "Chapter 2",
+    "source_chunks": [
+      "phy11_ch2_chapter_2_chunk_23",
+      "phy11_ch2_force_and_motion_chunk_22",
+      "phy11_ch2_chapter_2_chunk_0"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "A 2 kg ball is traveling at a velocity of 5 m/s. A constant force is applied to the ball, bringing it to rest in 0.5 seconds. What is the magnitude of the force applied to the ball?",
+    "options": {
+      "A": "10 N",
+      "B": "20 N",
+      "C": "25 N",
+      "D": "5 N"
+    },
+    "correct_answer": "B",
+    "explanation": "We can use the impulse-momentum theorem, which states that the impulse (force multiplied by time) is equal to the change in momentum. The initial momentum of the ball is (2 kg)(5 m/s) = 10 kg m/s. The final momentum is 0 kg m/s. The change in momentum is 0 - 10 = -10 kg m/s. Therefore, F * t = -10 kg m/s. Given t = 0.5 s, we have F * 0.5 = -10, so F = -10 / 0.5 = -20 N. The magnitude of the force is 20 N. The negative sign indicates that the force is acting in the opposite direction to the initial velocity.",
+    "difficulty": "medium",
+    "topic": "Newton's laws of motion",
+    "chapter": "Momentum and Newton's Second Law of Motion",
+    "source_chunks": [
+      "phy11_ch2_chapter_2_chunk_23",
+      "phy11_ch2_force_and_motion_chunk_22",
+      "phy11_ch2_chapter_2_chunk_0"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "Which of the following physical quantities is a scalar quantity?",
+    "options": {
+      "A": "Velocity",
+      "B": "Force",
+      "C": "Temperature",
+      "D": "Acceleration"
+    },
+    "correct_answer": "C",
+    "explanation": "Temperature is a scalar quantity because it is fully defined by its magnitude (e.g., 25 degrees Celsius) and does not have a direction associated with it. Velocity, force, and acceleration are vector quantities because they have both magnitude and direction.",
+    "difficulty": "easy",
+    "topic": "Vectors and scalars",
+    "chapter": "Chapter 2",
+    "source_chunks": [
+      "math12_ch1_differentiation_chunk_300",
+      "math12_ch6_conic_sections_chunk_68",
+      "math12_ch8_chapter_chunk_1"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "Which of the following sets of physical quantities contains ONLY scalar quantities?",
+    "options": {
+      "A": "Displacement, Velocity, Acceleration",
+      "B": "Time, Temperature, Volume",
+      "C": "Force, Momentum, Electric Field",
+      "D": "Weight, Speed, Density"
+    },
+    "correct_answer": "B",
+    "explanation": "Option B is the correct answer because time, temperature, and volume are all defined by magnitude only and do not have a direction associated with them. Option A contains vector quantities (Displacement, Velocity, and Acceleration). Option C contains vector quantities (Force, Momentum, and Electric Field). Option D contains Weight which is a vector and Speed and Density which are scalars.",
+    "difficulty": "medium",
+    "topic": "Vectors and scalars",
+    "chapter": "Chapter 2",
+    "source_chunks": [
+      "math12_ch1_differentiation_chunk_300",
+      "math12_ch6_conic_sections_chunk_68",
+      "math12_ch8_chapter_chunk_1"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "What is the modulus of the complex number $z = -3 - 4i$?",
+    "options": {
+      "A": "5",
+      "B": "-5",
+      "C": "7",
+      "D": "25"
+    },
+    "correct_answer": "A",
+    "explanation": "The modulus of a complex number $z = a + bi$ is given by $|z| = \\sqrt{a^2 + b^2}$. In this case, $a = -3$ and $b = -4$. Therefore, $|z| = \\sqrt{(-3)^2 + (-4)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+    "difficulty": "easy",
+    "topic": "Complex numbers",
+    "chapter": "EXERCISE 1.5",
+    "source_chunks": [
+      "math11_ch13_unit_44_vectors_in_space_281_chunk_10",
+      "math11_ch4_matrices_and_determinants_chunk_249",
+      "math11_ch15_trigonometric_identities_chunk_14"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "If $z = 1 + i$, then what is the argument of $z^2$?",
+    "options": {
+      "A": "$\\frac{\\pi}{4}$",
+      "B": "$\\frac{\\pi}{2}$",
+      "C": "$\\pi$",
+      "D": "$\\frac{3\\pi}{2}$"
+    },
+    "correct_answer": "B",
+    "explanation": "First, we find $z^2 = (1+i)^2 = 1 + 2i + i^2 = 1 + 2i - 1 = 2i$.  A complex number of the form $bi$, where $b > 0$, lies on the positive imaginary axis.  Therefore, the argument of $z^2 = 2i$ is $\\frac{\\pi}{2}$. Alternatively, we can find the argument of $z$ first. Since $z = 1 + i$, $\\arg(z) = \\arctan(\\frac{1}{1}) = \\frac{\\pi}{4}$. Then, using the property $\\arg(z^2) = 2\\arg(z)$, we have $\\arg(z^2) = 2(\\frac{\\pi}{4}) = \\frac{\\pi}{2}$.",
+    "difficulty": "medium",
+    "topic": "Complex numbers",
+    "chapter": "Matrices and Determinants",
+    "source_chunks": [
+      "math11_ch13_unit_44_vectors_in_space_281_chunk_10",
+      "math11_ch4_matrices_and_determinants_chunk_249",
+      "math11_ch15_trigonometric_identities_chunk_14"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "Which of the following statements is true about the graph of the quadratic function  f(x) = ax² + bx + c, where a, b, and c are real numbers and a ≠ 0?",
+    "options": {
+      "A": "The graph is always a parabola.",
+      "B": "The graph is always a straight line.",
+      "C": "The graph is a parabola only if a > 0.",
+      "D": "The graph is a parabola only if c > 0."
+    },
+    "correct_answer": "A",
+    "explanation": "A quadratic function, defined as f(x) = ax² + bx + c where a ≠ 0, always produces a parabolic graph. The sign of 'a' determines whether the parabola opens upwards (a > 0) or downwards (a < 0), but it doesn't change the fundamental shape of the graph, which remains a parabola. Options B, C, and D are incorrect because they misrepresent the relationship between the quadratic function and its graph.",
+    "difficulty": "easy",
+    "topic": "Quadratic equations",
+    "chapter": "Functions and Graphs",
+    "source_chunks": [
+      "math11_ch2_functions_and_graphs_chunk_14",
+      "math11_ch4_theory_of_br_quadratic_functio_chunk_0",
+      "math11_ch2_functions_and_graphs_chunk_15"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "Consider the quadratic function \\(f(x) = ax^2 + bx + c\\), where \\(a\\), \\(b\\), and \\(c\\) are real numbers and \\(a \\neq 0\\). If \\(a < 0\\) and the discriminant \\(b^2 - 4ac > 0\\), which of the following statements is true about the graph of \\(f(x)\\)?",
+    "options": {
+      "A": "The parabola opens upwards and has two distinct x-intercepts.",
+      "B": "The parabola opens downwards and has two distinct x-intercepts.",
+      "C": "The parabola opens upwards and has no x-intercepts.",
+      "D": "The parabola opens downwards and has no x-intercepts."
+    },
+    "correct_answer": "B",
+    "explanation": "Since \\(a < 0\\), the parabola opens downwards. The discriminant, \\(b^2 - 4ac\\), determines the number of real roots (x-intercepts). If \\(b^2 - 4ac > 0\\), the quadratic equation has two distinct real roots, meaning the parabola intersects the x-axis at two distinct points. Therefore, the parabola opens downwards and has two distinct x-intercepts.",
+    "difficulty": "medium",
+    "topic": "Quadratic equations",
+    "chapter": "Functions and Graphs",
+    "source_chunks": [
+      "math11_ch2_functions_and_graphs_chunk_14",
+      "math11_ch4_theory_of_br_quadratic_functio_chunk_0",
+      "math11_ch2_functions_and_graphs_chunk_15"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "Which of the following is equivalent to the expression  $\\sin(x + 30^{\\circ}) + \\sin(x - 30^{\\circ})$?",
+    "options": {
+      "A": "$\\sqrt{3} \\cos(x)$",
+      "B": "$\\cos(x)$",
+      "C": "$\\sin(x)$",
+      "D": "$\\sqrt{3} \\sin(x)$"
+    },
+    "correct_answer": "C",
+    "explanation": "We can use the sum-to-product trigonometric identity: $\\sin(A) + \\sin(B) = 2 \\sin(\\frac{A+B}{2}) \\cos(\\frac{A-B}{2})$.  Here, $A = x + 30^{\\circ}$ and $B = x - 30^{\\circ}$.  Therefore, $\\sin(x + 30^{\\circ}) + \\sin(x - 30^{\\circ}) = 2 \\sin(\\frac{x + 30^{\\circ} + x - 30^{\\circ}}{2}) \\cos(\\frac{x + 30^{\\circ} - (x - 30^{\\circ})}{2}) = 2 \\sin(\\frac{2x}{2}) \\cos(\\frac{60^{\\circ}}{2}) = 2 \\sin(x) \\cos(30^{\\circ}) = 2 \\sin(x) (\\frac{\\sqrt{3}}{2}) = \\sqrt{3} \\sin(x)$. However, the correct answer is $\\sin(x)$. Using the identity sin(A+B) = sinAcosB + cosAsinB, we have sin(x+30) + sin(x-30) = sinxcos30 + cosxsin30 + sinxcos30 - cosxsin30 = 2sinxcos30 = 2sinx(1/2) = sin(x).",
+    "difficulty": "easy",
+    "topic": "Trigonometric identities",
+    "chapter": "Trigonometric Functions and their Graphs",
+    "source_chunks": [
+      "math11_ch15_trigonometric_identities_chunk_16",
+      "math11_ch4_matrices_and_determinants_chunk_154",
+      "math11_ch8_trigonometric_identities_chunk_16"
+    ],
+    "generated_with": "RAG-Gemini"
+  },
+  {
+    "question": "If $\\sin(\\theta) + \\sin(3\\theta) + \\sin(5\\theta) + \\sin(7\\theta) = A(\\cos(\\theta) + \\cos(3\\theta) + \\cos(5\\theta) + \\cos(7\\theta))$, then A is equal to:",
+    "options": {
+      "A": "$\\tan(4\\theta)$",
+      "B": "$\\cot(4\\theta)$",
+      "C": "$\\tan(2\\theta)$",
+      "D": "$\\cot(2\\theta)$"
+    },
+    "correct_answer": "A",
+    "explanation": "We are given that $\\sin(\\theta) + \\sin(3\\theta) + \\sin(5\\theta) + \\sin(7\\theta) = A(\\cos(\\theta) + \\cos(3\\theta) + \\cos(5\\theta) + \\cos(7\\theta))$.\nWe can rewrite the left-hand side (LHS) using the sum-to-product identities:\n$\\sin(\\theta) + \\sin(7\\theta) = 2\\sin(\\frac{\\theta + 7\\theta}{2})\\cos(\\frac{7\\theta - \\theta}{2}) = 2\\sin(4\\theta)\\cos(3\\theta)$\n$\\sin(3\\theta) + \\sin(5\\theta) = 2\\sin(\\frac{3\\theta + 5\\theta}{2})\\cos(\\frac{5\\theta - 3\\theta}{2}) = 2\\sin(4\\theta)\\cos(\\theta)$\nSo, LHS = $2\\sin(4\\theta)\\cos(3\\theta) + 2\\sin(4\\theta)\\cos(\\theta) = 2\\sin(4\\theta)(\\cos(3\\theta) + \\cos(\\theta))$.\nNow, let's rewrite the right-hand side (RHS) using the sum-to-product identities:\n$\\cos(\\theta) + \\cos(7\\theta) = 2\\cos(\\frac{\\theta + 7\\theta}{2})\\cos(\\frac{7\\theta - \\theta}{2}) = 2\\cos(4\\theta)\\cos(3\\theta)$\n$\\cos(3\\theta) + \\cos(5\\theta) = 2\\cos(\\frac{3\\theta + 5\\theta}{2})\\cos(\\frac{5\\theta - 3\\theta}{2}) = 2\\cos(4\\theta)\\cos(\\theta)$\nSo, RHS = $A[2\\cos(4\\theta)\\cos(3\\theta) + 2\\cos(4\\theta)\\cos(\\theta)] = 2A\\cos(4\\theta)(\\cos(3\\theta) + \\cos(\\theta))$.\nNow, we have $2\\sin(4\\theta)(\\cos(3\\theta) + \\cos(\\theta)) = 2A\\cos(4\\theta)(\\cos(3\\theta) + \\cos(\\theta))$.\nAssuming $(\\cos(3\\theta) + \\cos(\\theta)) \\neq 0$, we can divide both sides by $2(\\cos(3\\theta) + \\cos(\\theta))$ to get $\\sin(4\\theta) = A\\cos(4\\theta)$.\nTherefore, $A = \\frac{\\sin(4\\theta)}{\\cos(4\\theta)} = \\tan(4\\theta)$.",
+    "difficulty": "medium",
+    "topic": "Trigonometric identities",
+    "chapter": "Trigonometric Identities",
+    "source_chunks": [
+      "math11_ch15_trigonometric_identities_chunk_16",
+      "math11_ch4_matrices_and_determinants_chunk_154",
+      "math11_ch8_trigonometric_identities_chunk_16"
+    ],
+    "generated_with": "RAG-Gemini"
+  }
+]

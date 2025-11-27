@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Which of the following is the correct form of partial fractions for the expression $\\frac{2}{x^2 - 1}$?",
+    "options": {
+      "A": "$\\frac{A}{x-1} + \\frac{B}{x+1}$",
+      "B": "$\\frac{A}{x^2} + \\frac{B}{-1}$",
+      "C": "$\\frac{A}{x} + \\frac{B}{x}$",
+      "D": "$\\frac{A}{x^2 - 1}$"
+    },
+    "correct_answer": "A",
+    "explanation": "The denominator $x^2 - 1$ can be factored into $(x-1)(x+1)$. Since each factor is linear and non-repeated, the correct form of the partial fraction decomposition is $\\frac{A}{x-1} + \\frac{B}{x+1}$, where A and B are constants to be determined.",
+    "difficulty": "easy",
+    "topic": "Resolve the following into partial fractions:",
+    "chapter": "Matrices and Determinants",
+    "source_chunks": [
+      "math11_ch4_matrices_and_determinants_chunk_40",
+      "math11_ch7_partial_fractions_chunk_0",
+      "math11_ch4_matrices_and_determinants_chunk_46"
+    ],
+    "generated_with": "RAG-Gemini"
+  }
+]

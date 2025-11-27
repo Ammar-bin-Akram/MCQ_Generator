@@ -1,0 +1,296 @@
+[
+  {
+    "question": "During the negative half-cycle of the input AC voltage in a half-wave rectifier circuit, what is the state of the diode and the resulting output voltage across the load resistor?",
+    "options": {
+      "A": "Diode is reverse biased, output voltage is approximately zero.",
+      "B": "Diode is forward biased, output voltage is approximately equal to the input voltage.",
+      "C": "Diode is reverse biased, output voltage is approximately equal to the input voltage.",
+      "D": "Diode is forward biased, output voltage is approximately zero."
+    },
+    "correct_answer": "A",
+    "explanation": "In a half-wave rectifier, the diode is reverse biased during the negative half-cycle of the input AC voltage. When reverse biased, the diode offers a very high resistance, effectively blocking the current flow. Consequently, the voltage drop across the load resistor (the output voltage) is almost zero during this period. Therefore, the correct answer is 'Diode is reverse biased, output voltage is approximately zero.'",
+    "difficulty": "easy",
+    "topic": "Half-Wave Rectification",
+    "chapter": "ELECTRONICS - Half-Wave Rectification",
+    "source_chunks": [
+      "phy12_ch18_electronics_chunk_4",
+      "phy12_ch8_chapter_18_chunk_5",
+      "phy12_ch18_electronics_chunk_31"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "easy"
+  },
+  {
+    "question": "A photodiode is operated in reverse bias. Which of the following statements best describes the relationship between the incident light intensity and the reverse current in the photodiode?",
+    "options": {
+      "A": "The reverse current increases with increasing light intensity.",
+      "B": "The reverse current decreases with increasing light intensity.",
+      "C": "The reverse current remains constant regardless of the light intensity.",
+      "D": "The reverse current is only present when the photodiode is forward biased."
+    },
+    "correct_answer": "A",
+    "explanation": "A photodiode is designed to detect light and is operated in reverse bias. When light strikes the p-n junction, photons generate electron-hole pairs. These generated carriers are swept across the junction by the reverse bias voltage, increasing the reverse current. Therefore, as the intensity of the incident light increases, the number of generated electron-hole pairs increases, leading to a corresponding increase in the reverse current. Option B is incorrect because the current increases with light intensity. Option C is incorrect because the current is dependent on the light intensity. Option D is incorrect because the photodiode is operated in reverse bias, not forward bias.",
+    "difficulty": "medium",
+    "topic": "Photo Diode",
+    "chapter": "ELECTRONICS",
+    "source_chunks": [
+      "phy12_ch18_electronics_chunk_8",
+      "phy12_ch8_chapter_18_chunk_9",
+      "phy12_ch18_electronics_chunk_52"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "medium"
+  },
+  {
+    "question": "An AVO meter is being used to measure current in a circuit. The galvanometer within the AVO meter has an internal resistance of $R_g = 100 \\Omega$ and a full-scale deflection current of $I_g = 1 mA$. To extend the range of the ammeter to measure a maximum current of $I = 1 A$, a shunt resistance $R_s$ is connected in parallel with the galvanometer. If, due to a manufacturing defect, the actual value of the shunt resistance is 1% higher than the calculated value, what percentage error will occur in the measured current at full-scale deflection?",
+    "options": {
+      "A": "Approximately 0.01% underestimation",
+      "B": "Approximately 1% underestimation",
+      "C": "Approximately 1% overestimation",
+      "D": "Approximately 0.01% overestimation"
+    },
+    "correct_answer": "B",
+    "explanation": "First, we calculate the required shunt resistance.  We know that $I_g R_g = (I - I_g)R_s$.  Since $I_g$ is much smaller than $I$, we can approximate $I - I_g \\approx I$.  Thus, $R_s = \\frac{I_g R_g}{I} = \\frac{(0.001 A)(100 \\Omega)}{1 A} = 0.1 \\Omega$.  If the shunt resistance is 1% higher, its actual value is $R_s' = 0.1(1 + 0.01) = 0.101 \\Omega$. Now, let's find the current $I'$ that will cause full-scale deflection with the incorrect shunt resistance.  We have $I_g R_g = (I' - I_g) R_s'$.  So, $I' = I_g + \\frac{I_g R_g}{R_s'} = 0.001 + \\frac{0.001(100)}{0.101} = 0.001 + 0.9901 = 0.9911 A$.  The difference between the intended current (1 A) and the actual current (0.9911 A) is $1 - 0.9911 = 0.0089 A$.  The percentage error is $\\frac{0.0089}{1} * 100 \\approx 0.89 %$. This is close to 1% and represents an underestimation because the measured current is less than the actual current the ammeter is designed to measure at full scale. Thus, it's approximately 1% underestimation.",
+    "difficulty": "hard",
+    "topic": "Current Measuring Part of AVO Meter",
+    "chapter": "ELECTROMAGNETISM",
+    "source_chunks": [
+      "phy12_ch14_electromagnetism_chunk_34",
+      "phy12_ch4_chapter_14_chunk_35",
+      "phy12_ch14_electromagnetism_chunk_33"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "hard"
+  },
+  {
+    "question": "During the electrolysis of copper sulphate (CuSO₄) solution using copper electrodes, which of the following reactions primarily occurs at the cathode?",
+    "options": {
+      "A": "Cu²⁺ + 2e⁻ → Cu",
+      "B": "Cu → Cu²⁺ + 2e⁻",
+      "C": "SO₄⁻ → SO₄ + e⁻",
+      "D": "H₂O → H⁺ + OH⁻"
+    },
+    "correct_answer": "A",
+    "explanation": "During the electrolysis of CuSO₄ solution with copper electrodes, the copper ions (Cu²⁺) in the solution are attracted to the cathode (negative electrode). At the cathode, these ions gain two electrons (reduction) and are deposited as solid copper (Cu). Therefore, the reaction Cu²⁺ + 2e⁻ → Cu occurs at the cathode. Option B represents oxidation occurring at the anode. Option C is not the primary reaction at either electrode in this specific electrolysis. Option D is water dissociating which does happen but is not the primary reaction.",
+    "difficulty": "easy",
+    "topic": "Chemical Effect",
+    "chapter": "CURRENT ELECTRICITY",
+    "source_chunks": [
+      "phy11_ch12_52_mechanical_properties_of_so_chunk_36",
+      "phy11_ch2_force_and_motion_chunk_146",
+      "phy12_ch13_current_electricity_chunk_7"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "easy"
+  },
+  {
+    "question": "A steel cable of original length *L* and cross-sectional area *A* is used to support a bridge. Due to the weight of the bridge, the cable stretches by a length Δ*L*. If the same cable is now used to support a second bridge that causes twice the tensile stress compared to the first bridge, what will be the new elongation of the cable, assuming the cable remains within its elastic limit?",
+    "options": {
+      "A": "Δ*L*/4",
+      "B": "Δ*L*/2",
+      "C": "2Δ*L*",
+      "D": "4Δ*L*"
+    },
+    "correct_answer": "C",
+    "explanation": "Since stress is proportional to strain within the elastic limit, and strain is defined as Δ*L*/L, doubling the stress will double the strain.  Therefore, if the stress is doubled, the change in length (elongation) will also double. Thus, the new elongation will be 2Δ*L*.",
+    "difficulty": "hard",
+    "topic": "Strain",
+    "chapter": "5.2 MECHANICAL PROPERTIES OF SOLIDS",
+    "source_chunks": [
+      "phy11_ch12_52_mechanical_properties_of_so_chunk_2",
+      "phy11_ch2_force_and_motion_chunk_112",
+      "phy12_ch17_physics_of_solids_chunk_10"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "medium"
+  },
+  {
+    "question": "A steel wire of length *L* and cross-sectional area *A* is stretched by a force *F*. If the Young's modulus of steel is *Y*, what is the expression for the strain energy *U* stored in the wire?",
+    "options": {
+      "A": "U = (F^2 * L) / (2 * A * Y)",
+      "B": "U = (F * L) / (A * Y)",
+      "C": "U = (F^2 * A) / (2 * L * Y)",
+      "D": "U = (F * L) / (2 * A * Y)"
+    },
+    "correct_answer": "A",
+    "explanation": "The strain energy *U* stored in a stretched wire can be expressed as U = (1/2) * stress * strain * volume.  Stress is given by F/A, and strain is given by stress/Y = (F/A)/Y = F/(A*Y).  The volume of the wire is A*L. Therefore, U = (1/2) * (F/A) * (F/(A*Y)) * (A*L) = (F^2 * L) / (2 * A * Y).",
+    "difficulty": "medium",
+    "topic": "Strain Energy in Deformed Materials",
+    "chapter": "PHYSICS OF SOLIDS",
+    "source_chunks": [
+      "phy11_ch12_52_mechanical_properties_of_so_chunk_11",
+      "phy11_ch2_force_and_motion_chunk_121",
+      "phy12_ch17_physics_of_solids_chunk_33"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "hard"
+  },
+  {
+    "question": "If a person receives a dose equivalent ($D_s$) of 4 Sv from radiation with an RBE factor of 10, what is the absorbed dose (D) in Gray (Gy)?",
+    "options": {
+      "A": "0.4 Gy",
+      "B": "4 Gy",
+      "C": "40 Gy",
+      "D": "0.04 Gy"
+    },
+    "correct_answer": "A",
+    "explanation": "The absorbed dose (D) is calculated using the formula:  D = D_s / RBE.  Given D_s = 4 Sv and RBE = 10,  D = 4 Sv / 10 = 0.4 Gy. Therefore, the absorbed dose is 0.4 Gy.",
+    "difficulty": "easy",
+    "topic": "RBE factor $=10$",
+    "chapter": "21.12 BIOLOGICAL EFFECTS OF RADIATION",
+    "source_chunks": [
+      "phy12_ch13_2112_biological_effects_of_rad_chunk_4",
+      "phy12_ch21_nuclear_physics_chunk_46",
+      "phy11_ch25_chapter_10_deatromegnetism_chunk_10"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "easy"
+  },
+  {
+    "question": "In a reverse-biased p-n junction, what primarily causes the small reverse current ($I_s$) that flows before breakdown?",
+    "options": {
+      "A": "The flow of majority charge carriers due to the reduced depletion region width.",
+      "B": "The flow of minority charge carriers due to the applied reverse voltage.",
+      "C": "The diffusion of majority charge carriers across the junction, overcoming the potential barrier.",
+      "D": "The Zener effect, where electrons tunnel through the depletion region."
+    },
+    "correct_answer": "B",
+    "explanation": "In a reverse-biased p-n junction, the applied voltage widens the depletion region, hindering the flow of majority charge carriers. However, a small reverse current ($I_s$) flows due to the minority charge carriers (electrons in the p-region and holes in the n-region) being swept across the junction by the electric field created by the reverse voltage. Option A is incorrect because the depletion region widens, not reduces. Option C is incorrect because majority carriers are blocked by the widened depletion region and increased potential barrier. Option D is incorrect because while the Zener effect does contribute to reverse current, it is not the primary cause of the small reverse current before breakdown.",
+    "difficulty": "medium",
+    "topic": "Reverse Biased p-n Junction",
+    "chapter": "Chapter 18",
+    "source_chunks": [
+      "phy12_ch18_electronics_chunk_3",
+      "phy12_ch8_chapter_18_chunk_4",
+      "phy12_ch18_electronics_chunk_1"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "medium"
+  },
+  {
+    "question": "A thermistor with a high negative temperature coefficient (NTC) is used in a circuit to measure temperatures near 10 K. Which of the following statements best explains why an NTC thermistor is preferred over a thermistor with a positive temperature coefficient (PTC) for this application?",
+    "options": {
+      "A": "At very low temperatures, the resistance of an NTC thermistor becomes significantly lower, leading to a more sensitive and accurate voltage measurement due to reduced noise.",
+      "B": "The high resistance of an NTC thermistor at low temperatures allows for a more accurate measurement because even small changes in temperature result in relatively large changes in resistance, leading to a more easily detectable voltage signal.",
+      "C": "PTC thermistors are inherently unstable at extremely low temperatures, whereas NTC thermistors maintain a stable and predictable resistance, making them suitable for precise measurements.",
+      "D": "NTC thermistors exhibit a linear relationship between temperature and resistance at low temperatures, simplifying the calibration process and ensuring accurate temperature readings, while PTC thermistors become non-linear."
+    },
+    "correct_answer": "B",
+    "explanation": "The correct answer is B. NTC thermistors have a high resistance at low temperatures. This high resistance allows for a more accurate measurement because small changes in temperature result in significant changes in resistance. This larger change in resistance translates to a more easily detectable voltage signal, improving the sensitivity and accuracy of the temperature measurement. Option A is incorrect because the resistance increases, not decreases, at low temperatures for NTC thermistors. Option C is not accurate. While stability is important, the primary reason is the high resistance. Option D is generally incorrect; thermistors, whether NTC or PTC, rarely exhibit a perfectly linear relationship between temperature and resistance, especially over a wide temperature range.",
+    "difficulty": "hard",
+    "topic": "Thermistors",
+    "chapter": "CURRENT ELECTRICITY",
+    "source_chunks": [
+      "phy12_ch13_current_electricity_chunk_19",
+      "phy12_ch3_chapter_13_chunk_20",
+      "phy11_ch20_applications_of_thermistors_chunk_1"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "hard"
+  },
+  {
+    "question": "When a nucleus emits an alpha particle, what happens to its mass number (A) and atomic number (Z)?",
+    "options": {
+      "A": "A decreases by 4, Z decreases by 2",
+      "B": "A increases by 4, Z increases by 2",
+      "C": "A decreases by 2, Z decreases by 4",
+      "D": "A remains the same, Z decreases by 2"
+    },
+    "correct_answer": "A",
+    "explanation": "An alpha particle is equivalent to a Helium nucleus (${}_{2}^{4}He$), which has a mass number of 4 and an atomic number of 2. Therefore, when an alpha particle is emitted, the mass number of the parent nucleus decreases by 4, and the atomic number decreases by 2, resulting in a different daughter nucleus.",
+    "difficulty": "medium",
+    "topic": "Nuclear Transmutation",
+    "chapter": "Nuclear Transmutation",
+    "source_chunks": [
+      "phy12_ch12_from_alpha-particles_scatterin_chunk_9",
+      "phy12_ch21_nuclear_physics_chunk_11",
+      "phy11_ch12__121_structure_and_properties__chunk_25"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "easy"
+  },
+  {
+    "question": "In a NaCl crystal lattice, when an external force is applied and then removed, the ability of the unit cell to return to its original shape demonstrates which property, assuming the applied force is within elastic limits?",
+    "options": {
+      "A": "Elasticity, due to the atoms returning to their equilibrium positions.",
+      "B": "Plasticity, resulting in permanent deformation of the unit cell.",
+      "C": "Brittleness, leading to fracture of the crystal structure.",
+      "D": "Viscosity, causing a slow and gradual return to the original shape."
+    },
+    "correct_answer": "A",
+    "explanation": "The question describes a scenario where an external force is applied to a NaCl crystal lattice and then removed. The key phrase 'return to its original shape' indicates the property of elasticity. Elasticity is the ability of a solid material to return to its original shape after the deforming force is removed. This occurs because the atoms in the lattice return to their equilibrium positions. Plasticity would result in permanent deformation. Brittleness would cause the material to fracture under stress. Viscosity is a property of fluids, not solids.",
+    "difficulty": "hard",
+    "topic": "NaCl crystal lattice",
+    "chapter": "Chapter 17",
+    "source_chunks": [
+      "phy12_ch17_physics_of_solids_chunk_7",
+      "phy12_ch7_chapter_17_chunk_8",
+      "phy12_ch17_physics_of_solids_chunk_2"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "medium"
+  },
+  {
+    "question": "An ohmmeter is used to measure resistance. Before measuring an unknown resistance, the ohmmeter is typically zeroed by shorting its leads together. What is the primary purpose of this zeroing process?",
+    "options": {
+      "A": "To compensate for the internal resistance of the ohmmeter's battery and leads, ensuring accurate resistance readings.",
+      "B": "To maximize the current flowing through the ohmmeter circuit, allowing for more precise measurements.",
+      "C": "To protect the galvanometer from overload when measuring very low resistances.",
+      "D": "To calibrate the ohmmeter against a known standard resistor, ensuring consistent measurements over time."
+    },
+    "correct_answer": "A",
+    "explanation": "The zeroing process of an ohmmeter compensates for the internal resistance of the battery and the leads. When the leads are shorted, the meter is adjusted to read zero resistance, effectively subtracting the internal resistance from subsequent measurements of unknown resistances. This ensures that the reading reflects only the resistance of the component being tested, leading to more accurate results. The other options are either not the primary reason or are factually incorrect.",
+    "difficulty": "medium",
+    "topic": "Ohmmeter",
+    "chapter": "N/A",
+    "source_chunks": [
+      "math12_ch1_chapter_chunk_0",
+      "math12_ch1_differentiation_chunk_71",
+      "math12_ch4_chapter_chunk_0"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "easy"
+  },
+  {
+    "question": "A CRO displays two sinusoidal voltage waveforms simultaneously. Waveform I completes one cycle in 4 divisions along the x-axis, while Waveform II completes one cycle in 8 divisions. If the time base is set to 2 ms/division, and Waveform I is at its positive peak when Waveform II is at zero and increasing, what is the approximate phase difference between Waveform I and Waveform II?",
+    "options": {
+      "A": "45 degrees",
+      "B": "90 degrees",
+      "C": "180 degrees",
+      "D": "270 degrees"
+    },
+    "correct_answer": "B",
+    "explanation": "Waveform I completes one cycle in 4 divisions, and Waveform II completes one cycle in 8 divisions. This means the period of Waveform I is half the period of Waveform II, so Waveform I oscillates twice as fast. Since Waveform I is at its positive peak when Waveform II is at zero and increasing, this corresponds to a phase difference of 90 degrees. A full cycle is 360 degrees, so a quarter of a cycle is 90 degrees.",
+    "difficulty": "medium",
+    "topic": "Uses of CRO",
+    "chapter": "ELECTROMAGNETISM",
+    "source_chunks": [
+      "phy12_ch14_electromagnetism_chunk_22",
+      "phy12_ch4_chapter_14_chunk_23",
+      "phy12_ch14_electromagnetism_chunk_24"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "medium"
+  },
+  {
+    "question": "A photocell with a sodium cathode (work function = 2.46 eV) is illuminated with light of wavelength 400 nm. If the intensity of the light is doubled while keeping the wavelength constant, what will be the effect on the stopping potential (V₀) and the photoelectric current (I)?",
+    "options": {
+      "A": "V₀ will increase, and I will remain the same.",
+      "B": "V₀ will remain the same, and I will increase.",
+      "C": "V₀ will decrease, and I will increase.",
+      "D": "Both V₀ and I will remain the same."
+    },
+    "correct_answer": "B",
+    "explanation": "The stopping potential (V₀) is determined by the maximum kinetic energy of the photoelectrons, which depends only on the frequency (or wavelength) of the incident light and the work function of the metal (K.E.max = hf - Φ = eV₀). Since the wavelength remains constant, the frequency also remains constant, and therefore the maximum kinetic energy and the stopping potential will not change. However, doubling the intensity of light doubles the number of photons incident on the cathode per unit time. This, in turn, doubles the number of photoelectrons emitted per unit time, leading to a proportional increase in the photoelectric current (I).",
+    "difficulty": "hard",
+    "topic": "Photo-Voltaic Cell",
+    "chapter": "ELECTRONICS - Chapter Content",
+    "source_chunks": [
+      "phy12_ch18_electronics_chunk_52",
+      "phy12_ch9_dawn_of_modern_physics_chunk_18",
+      "phy12_ch18_electronics_chunk_49"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "hard"
+  }
+]
