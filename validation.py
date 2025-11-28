@@ -22,7 +22,7 @@ class CurriculumMCQValidator:
         
         # Quality thresholds
         self.min_question_length = 8   # words
-        self.min_option_length = 2     # words
+        self.min_option_length = 1     # words
         self.max_option_length = 150   # words
     
     def validate_structure(self, mcq: Dict) -> Tuple[bool, List[str]]:

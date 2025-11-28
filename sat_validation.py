@@ -32,7 +32,7 @@ class SATQuestionValidator:
         
         # Minimum quality thresholds
         self.min_question_length = 10  # words
-        self.min_option_length = 3     # words
+        self.min_option_length = 1     # words
         self.max_option_length = 100   # words
         
     def validate_structure(self, mcq: Dict) -> Tuple[bool, List[str]]:

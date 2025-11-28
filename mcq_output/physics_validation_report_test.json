@@ -1,0 +1,123 @@
+[
+  {
+    "question": "For a given source with internal resistance 'r' and emf 'E', what condition must be met by the external load resistance 'R' to achieve maximum power transfer to the load?",
+    "validation": {
+      "question": "For a given source with internal resistance 'r' and emf 'E', what condition must be met by the external load resistance 'R' to achieve maximum power transfer to the load?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "The electric field intensity between two parallel plates separated by a distance 'd' with a potential difference 'ΔV' is given by E = -ΔV/Δd. If the potential at plate A is 10V and the potential at plate B, 2mm away, is 12V, what is the magnitude of the electric field intensity between the plates?",
+    "validation": {
+      "question": "The electric field intensity between two parallel plates separated by a distance 'd' with a potential difference 'ΔV' is given by E = -ΔV/Δd. If the potential at plate A is 10V and the potential at plate B, 2mm away, is 12V, what is the magnitude of the electric field intensity between the plates?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "During the electrolysis of copper sulphate ($CuSO_4$) solution using copper electrodes, what happens at the anode?",
+    "validation": {
+      "question": "During the electrolysis of copper sulphate ($CuSO_4$) solution using copper electrodes, what happens at the anode?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "A straight conducting wire of length *l* carrying a steady current *I* is placed in a uniform magnetic field of magnitude *B*. The wire is oriented at an angle θ with respect to the magnetic field. Which of the following statements accurately describes the force experienced by the wire?",
+    "validation": {
+      "question": "A straight conducting wire of length *l* carrying a steady current *I* is placed in a uniform magnetic field of magnitude *B*. The wire is oriented at an angle θ with respect to the magnetic field. Which of the following statements accurately describes the force experienced by the wire?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "According to the calculation using equation 21.5, what is the mass defect of the deuteron, expressed in kilograms?",
+    "validation": {
+      "question": "According to the calculation using equation 21.5, what is the mass defect of the deuteron, expressed in kilograms?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "In a Light Emitting Diode (LED), light emission occurs due to which of the following processes?",
+    "validation": {
+      "question": "In a Light Emitting Diode (LED), light emission occurs due to which of the following processes?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "Consider two radioactive isotopes, Isotope A undergoing alpha decay and Isotope B undergoing beta decay. Both isotopes release the same total amount of energy during their respective decays. Which of the following statements accurately describes the kinetic energy distribution of the emitted particles?",
+    "validation": {
+      "question": "Consider two radioactive isotopes, Isotope A undergoing alpha decay and Isotope B undergoing beta decay. Both isotopes release the same total amount of energy during their respective decays. Which of the following statements accurately describes the kinetic energy distribution of the emitted particles?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "A transistor is formed by sandwiching a single crystal of germanium or silicon into how many regions?",
+    "validation": {
+      "question": "A transistor is formed by sandwiching a single crystal of germanium or silicon into how many regions?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "A SQUID (Superconducting Quantum Interference Device) is used to detect weak magnetic fields. The fundamental source of these magnetic fields at the atomic level is primarily due to:",
+    "validation": {
+      "question": "A SQUID (Superconducting Quantum Interference Device) is used to detect weak magnetic fields. The fundamental source of these magnetic fields at the atomic level is primarily due to:",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "In a mass spectrograph, ions are deflected in a semicircular path by a uniform magnetic field. If the magnetic field strength is increased while keeping the accelerating potential and ion charge constant, what happens to the radius of the semicircular path?",
+    "validation": {
+      "question": "In a mass spectrograph, ions are deflected in a semicircular path by a uniform magnetic field. If the magnetic field strength is increased while keeping the accelerating potential and ion charge constant, what happens to the radius of the semicircular path?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "In the vector representation of an alternating current (AC) quantity, which of the following statements is NOT a necessary condition for accurate graphical representation?",
+    "validation": {
+      "question": "In the vector representation of an alternating current (AC) quantity, which of the following statements is NOT a necessary condition for accurate graphical representation?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  }
+]

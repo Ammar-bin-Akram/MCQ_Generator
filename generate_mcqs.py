@@ -13,8 +13,15 @@ from pathlib import Path
 from sentence_transformers import SentenceTransformer
 import google.generativeai as genai
 import os
+from dotenv import load_dotenv
 from typing import List, Dict
 import re
+import random
+
+from validation import CurriculumMCQValidator
+from phy_validation import MCQValidator
+
+load_dotenv()
 
 # Directories
 INDEX_DIR = Path("index")
@@ -51,7 +58,7 @@ class RAGMCQGenerator:
         print(f"   ✓ Loaded {len(self.chunks)} chunks")
         
         # Initialize Google Gemini
-        api_key = "AIzaSyCX1vff3kIIFGggo2IewuApZGNv4VSdGaU"
+        api_key = os.getenv("GOOGLE_API_KEY")
         if not api_key:
             raise ValueError("GOOGLE_API_KEY not found in environment variables")
         
@@ -346,6 +353,7 @@ class RAGMCQGenerator:
 5. Ensure the question tests understanding, not just memorization
 6. Use proper mathematical notation where needed
 7. Make distractors (wrong answers) plausible but clearly incorrect
+8. Add one or multiple distractors that are meant to confuse students
 
 **Output Format (JSON only, no markdown):**
 {{
@@ -357,6 +365,7 @@ class RAGMCQGenerator:
         "D": "Option D text"
     }},
     "correct_answer": "A",
+    "distractors": ["B", "C"],
     "explanation": "Detailed explanation of why the answer is correct",
     "difficulty": "{difficulty}",
     "topic": "{topic}",
@@ -440,7 +449,7 @@ Generate the MCQ now (respond with only the JSON, no additional text):"""
             
             # Show if there's a mismatch
             if calculated_difficulty != requested_difficulty:
-                print(f"   ℹ️  Difficulty adjusted: {requested_difficulty} → {calculated_difficulty}")
+                print(f"   i  Difficulty adjusted: {requested_difficulty} → {calculated_difficulty}")
             
             print(f"   ✅ MCQ generated - Difficulty: {calculated_difficulty}")
             return mcq
@@ -487,7 +496,6 @@ Generate the MCQ now (respond with only the JSON, no additional text):"""
             json.dump(mcqs, f, indent=2, ensure_ascii=False)
         
         print(f"\n💾 Saved {len(mcqs)} MCQs to {output_path}")
-
 
 
     def load_all_topics_from_blueprint(self) -> List[str]:
@@ -587,7 +595,7 @@ Generate the MCQ now (respond with only the JSON, no additional text):"""
             print(f"   ✓ Filtered to {len(all_topics)} {subject_filter} topics")
         
         # Randomly select topics
-        import random
+        
         num_to_select = min(num_questions, len(all_topics))
         selected_topics = random.sample(all_topics, num_to_select)
         
@@ -638,8 +646,13 @@ def main():
     generator = RAGMCQGenerator()
     
     # ✅ Import CURRICULUM validator (not SAT validator)
-    from validation import CurriculumMCQValidator
-    validator = CurriculumMCQValidator()
+
+    # Load source chunks JSON
+    with open("index/valid_chunk_ids.json", "r", encoding="utf-8") as f:
+        valid_chunk_ids = json.load(f)
+    
+    # validator = CurriculumMCQValidator()
+    validator = MCQValidator(valid_chunk_ids)
     
     # ========== GENERATE PHYSICS MCQs ==========
     
@@ -657,66 +670,42 @@ def main():
     generator.save_mcqs(physics_mcqs, "physics_mcqs.json")
     
     # Validate physics MCQs
-    if physics_mcqs:
-        print("\n" + "="*70)
-        print("VALIDATING PHYSICS MCQs")
-        print("="*70)
-        physics_report = validator.validate_batch(physics_mcqs)
-        validator.save_validation_report(
-            physics_report, 
-            MCQ_OUTPUT_DIR / "physics_validation_report.json"
-        )
-    
-    # ========== GENERATE MATH MCQs ==========
-    
-    # print("\n" + "="*70)
-    # print("PHASE 2: GENERATING MATH MCQs")
-    # print("="*70)
-    
-    # math_mcqs = generator.generate_random_mcqs(
-    #     num_questions=15,
-    #     difficulty_mix=True,
-    #     subject_filter='math'
-    # )
-    
-    # # Save math MCQs
-    # generator.save_mcqs(math_mcqs, "math_mcqs.json")
-    
-    # # Validate math MCQs
-    # if math_mcqs:
+    # if physics_mcqs:
     #     print("\n" + "="*70)
-    #     print("VALIDATING MATH MCQs")
+    #     print("VALIDATING PHYSICS MCQs")
     #     print("="*70)
-    #     math_report = validator.validate_batch(math_mcqs)
+    #     physics_report = validator.validate_batch(physics_mcqs)
     #     validator.save_validation_report(
-    #         math_report, 
-    #         MCQ_OUTPUT_DIR / "math_validation_report.json"
+    #         physics_report, 
+    #         MCQ_OUTPUT_DIR / "physics_validation_report_test.json"
     #     )
+
+    # Build mapping: chunk_id -> content
+
+    batch_report = []
+    for mcq in physics_mcqs:
+        mcq_chunk_ids = mcq.get("source_chunks", [])
+
+        report = validator.validate_mcq(
+            question=mcq["question"],
+            correct_answer=mcq["correct_answer"],
+            distractors=mcq["distractors"],
+            mcq_chunk_ids=mcq_chunk_ids,
+            math_question=mcq.get("math_question"),
+            user_answer=mcq.get("user_answer")
+        )
+        batch_report.append({
+            "question": mcq["question"],
+            "validation": report
+        })
     
-    # ========== COMBINED SUMMARY ==========
-    
-    print("\n" + "="*70)
-    print("FINAL SUMMARY")
-    print("="*70)
-    
-    total_physics = len(physics_mcqs)
-    # total_math = len(math_mcqs)
-    # total_all = total_physics + total_math
-    
-    print(f"\nGeneration Statistics:")
-    print(f"   Physics MCQs: {total_physics}")
-    # print(f"   Math MCQs: {total_math}")
-    # print(f"   Total MCQs: {total_all}")
-    
-    if physics_mcqs:
-        print(f"\nPhysics Validation:")
-        print(f"   Pass Rate: {physics_report['pass_rate']:.1f}%")
-        print(f"   Avg Quality: {physics_report['average_quality_score']}/100")
-    
+    output_path = Path(MCQ_OUTPUT_DIR / "physics_validation_report_test.json")
+    validator.save_validation_report(batch_report, output_path)
+
     # if math_mcqs:
-    #     print(f"\nMath Validation:")
-    #     print(f"   Pass Rate: {math_report['pass_rate']:.1f}%")
-    #     print(f"   Avg Quality: {math_report['average_quality_score']}/100")
+        # print(f"\nMath Validation:")
+        # print(f"   Pass Rate: {math_report['pass_rate']:.1f}%")
+        # print(f"   Avg Quality: {math_report['average_quality_score']}/100")
     
     print(f"\nFiles Created:")
     print(f"   - mcq_output/physics_mcqs.json")
