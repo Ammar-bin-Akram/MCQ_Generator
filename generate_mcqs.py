@@ -51,7 +51,7 @@ class RAGMCQGenerator:
         print(f"   ✓ Loaded {len(self.chunks)} chunks")
         
         # Initialize Google Gemini
-        api_key = "AIzaSyCX1vff3kIIFGggo2IewuApZGNv4VSdGaU"
+        api_key = ""
         if not api_key:
             raise ValueError("GOOGLE_API_KEY not found in environment variables")
         
