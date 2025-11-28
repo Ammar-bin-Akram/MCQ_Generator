@@ -53,7 +53,7 @@ class SATMCQGenerator:
         print(f"   ✓ Loaded {len(self.passages)} SAT passages")
         
         # Initialize Google Gemini
-        api_key = "AIzaSyCX1vff3kIIFGggo2IewuApZGNv4VSdGaU"
+        api_key = "" # your api key
         if not api_key:
             raise ValueError("GOOGLE_API_KEY not found")
         
