@@ -21,6 +21,9 @@ import random
 from validation import CurriculumMCQValidator
 from adaptive_module import AdaptiveEngine
 from phy_validation import MCQValidator
+from conduct_test import conduct_test, quick_test_mode
+from calculate_metrics import calculate_metrics
+from pilot_metrics import PilotMetrics
 
 load_dotenv()
 
@@ -438,7 +441,7 @@ Generate the MCQ now (respond with only the JSON, no additional text):"""
             
             # Parse response
             response_text = response.text
-            print(response_text)
+            # print(response_text)
             
             if "```json" in response_text:
                 response_text = response_text.split("```json")[1].split("```")[0].strip()
@@ -748,95 +751,225 @@ Generate the MCQ now (respond with only the JSON, no additional text):"""
     
 
 def main():
-    """Main execution with validation for Math and Physics"""
-    print("="*70)
-    print("MCQ GENERATION & VALIDATION (Math + Physics)")
-    print("="*70)
-
-    # Initialize RAG system
+    """
+    Complete MCQ Pipeline:
+    1. Generation with RAG
+    2. Validation
+    3. Adaptive Testing (Optional)
+    4. Student Testing
+    5. Pilot Metrics Analysis
+    """
+    print("="*80)
+    print("COMPLETE MCQ GENERATION & ANALYSIS PIPELINE")
+    print("="*80)
+    
+    # ========================================
+    # CONFIGURATION
+    # ========================================
+    print("\n📋 Pipeline Configuration:")
+    print("   1. Generate MCQs? (y/n)")
+    print("   2. Run Adaptive Session? (y/n)")
+    print("   3. Conduct Student Test? (y/n)")
+    print("   4. Calculate Metrics? (y/n)")
+    
+    run_generation = input("\nGenerate MCQs? (y/n): ").strip().lower() == 'y'
+    run_adaptive = input("Run Adaptive Session? (y/n): ").strip().lower() == 'y'
+    run_testing = input("Conduct Student Test? (y/n): ").strip().lower() == 'y'
+    run_metrics = input("Calculate Metrics? (y/n): ").strip().lower() == 'y'
+    
+    # Initialize components
     generator = RAGMCQGenerator()
     
-    # ✅ Import CURRICULUM validator (not SAT validator)
-
-    # Load source chunks JSON
     with open("index/valid_chunk_ids.json", "r", encoding="utf-8") as f:
         valid_chunk_ids = json.load(f)
-    
-    # validator = CurriculumMCQValidator()
     validator = MCQValidator(valid_chunk_ids)
-
-    # adaptive_engine = AdaptiveMCQEngine()
-    results = generator.run_adaptive_session(generator)
-
-    # Save adaptive session results
-    adaptive_output_path = MCQ_OUTPUT_DIR / "adaptive_session_results.json"
-
-    with open(adaptive_output_path, 'w', encoding='utf-8') as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
-    print(f"\n💾 Saved adaptive session results to {adaptive_output_path}")
     
-    # ========== GENERATE PHYSICS MCQs ==========
+    # ========================================
+    # PHASE 1: MCQ GENERATION
+    # ========================================
+    if run_generation:
+        print("\n" + "="*80)
+        print("PHASE 1: MCQ GENERATION")
+        print("="*80)
+        
+        subject = input("\nSubject (physics/math): ").strip().lower()
+        num_questions = int(input("Number of questions: ").strip() or "10")
+        
+        physics_mcqs = generator.generate_random_mcqs(
+            num_questions=num_questions,
+            difficulty_mix=True,
+            subject_filter=subject
+        )
+        
+        if physics_mcqs:
+            # Save MCQs
+            output_file = f"{subject}_mcqs.json"
+            generator.save_mcqs(physics_mcqs, output_file)
+            
+            # Validate
+            print("\n" + "="*80)
+            print(f"VALIDATING {subject.upper()} MCQs")
+            print("="*80)
+            
+            batch_report = []
+            for mcq in physics_mcqs:
+                mcq_chunk_ids = mcq.get("source_chunks", [])
+                report = validator.validate_mcq(
+                    question=mcq["question"],
+                    correct_answer=mcq["correct_answer"],
+                    distractors=mcq.get("distractors", []),
+                    mcq_chunk_ids=mcq_chunk_ids,
+                    math_question=mcq.get("math_question"),
+                    user_answer=mcq.get("user_answer")
+                )
+                batch_report.append({
+                    "question": mcq["question"],
+                    "validation": report
+                })
+            
+            validation_output = MCQ_OUTPUT_DIR / f"{subject}_validation_report.json"
+            validator.save_validation_report(batch_report, validation_output)
+            
+            print(f"\n✅ Generated and validated {len(physics_mcqs)} MCQs")
     
-    print("\n" + "="*70)
-    print("PHASE 1: GENERATING PHYSICS MCQs")
-    print("="*70)
+    # ========================================
+    # PHASE 2: ADAPTIVE SESSION
+    # ========================================
+    if run_adaptive:
+        print("\n" + "="*80)
+        print("PHASE 2: ADAPTIVE TESTING SESSION")
+        print("="*80)
+        
+        num_adaptive = int(input("\nNumber of adaptive questions: ").strip() or "5")
+        
+        adaptive_results = generator.run_adaptive_session(
+            generator,
+            num_questions=num_adaptive
+        )
+        
+        # Save adaptive results
+        adaptive_output = MCQ_OUTPUT_DIR / "adaptive_session_results.json"
+        with open(adaptive_output, 'w', encoding='utf-8') as f:
+            json.dump(adaptive_results, f, indent=2, ensure_ascii=False)
+        
+        print(f"\n💾 Saved adaptive session results to {adaptive_output}")
+        
+        # Display adaptive summary
+        print("\n" + "="*80)
+        print("ADAPTIVE SESSION SUMMARY")
+        print("="*80)
+        
+        correct_count = sum(1 for r in adaptive_results if r['result'] == 1)
+        final_theta = adaptive_results[-1]['theta_after'] if adaptive_results else 0
+        
+        print(f"   Questions Answered: {len(adaptive_results)}")
+        print(f"   Correct Answers: {correct_count}/{len(adaptive_results)}")
+        print(f"   Final Ability (θ): {round(final_theta, 3)}")
+        print(f"   Performance: {(correct_count/len(adaptive_results)*100):.1f}%")
     
-    # physics_mcqs = generator.generate_random_mcqs(             *
-    #     num_questions=15,
-    #     difficulty_mix=True,
-    #     subject_filter='physics'
-    # )
+    # ========================================
+    # PHASE 3: STUDENT TESTING
+    # ========================================
+    if run_testing:
+        print("\n" + "="*80)
+        print("PHASE 3: STUDENT TESTING")
+        print("="*80)
+        
+        # Select MCQ file
+        print("\nSelect MCQ file for testing:")
+        print("   1. mcq_output/physics_mcqs.json")
+        print("   2. mcq_output/math_mcqs.json")
+        print("   3. Adaptive session results")
+        print("   4. Custom path")
+        
+        choice = input("\nChoice (1-4): ").strip()
+        
+        mcq_files = {
+            '1': 'mcq_output/physics_mcqs.json',
+            '2': 'mcq_output/math_mcqs.json',
+            '3': 'mcq_output/adaptive_session_results.json'
+        }
+        
+        if choice in mcq_files:
+            mcq_file = mcq_files[choice]
+        elif choice == '4':
+            mcq_file = input("Enter path: ").strip()
+        else:
+            mcq_file = 'mcq_output/physics_mcqs.json'
+        
+        if not Path(mcq_file).exists():
+            print(f"❌ File not found: {mcq_file}")
+        else:
+            # Choose test mode
+            test_mode = input("\nTest mode (1=Interactive, 2=Quick): ").strip()
+            
+            if test_mode == '2':
+                # Quick test with simulated students
+                num_students = int(input("Number of students to simulate: ").strip() or "10")
+                quick_test_mode(mcq_file, num_students)
+            else:
+                # Interactive test with real students
+                num_students = int(input("Number of students: ").strip() or "5")
+                conduct_test(mcq_file, num_students)
+            
+            print("\n✅ Student testing complete!")
     
-    # Save physics MCQs
-    # generator.save_mcqs(physics_mcqs, "physics_mcqs.json")                            *
+    # ========================================
+    # PHASE 4: METRICS ANALYSIS
+    # ========================================
+    if run_metrics:
+        print("\n" + "="*80)
+        print("PHASE 4: PILOT METRICS ANALYSIS")
+        print("="*80)
+        
+        # Check if response file exists
+        response_file = 'student_responses.json'
+        
+        if not Path(response_file).exists():
+            print(f"\n⚠️  Response file not found: {response_file}")
+            print("   Please run student testing first (Phase 3)")
+        else:
+            # Calculate metrics
+            metrics_report = calculate_metrics(response_file)
+            
+            print("\n✅ Metrics analysis complete!")
     
-    # Validate physics MCQs
-    # if physics_mcqs:
-    #     print("\n" + "="*70)
-    #     print("VALIDATING PHYSICS MCQs")
-    #     print("="*70)
-    #     physics_report = validator.validate_batch(physics_mcqs)
-    #     validator.save_validation_report(
-    #         physics_report, 
-    #         MCQ_OUTPUT_DIR / "physics_validation_report_test.json"
-    #     )
-
-    # Build mapping: chunk_id -> content
-
-    # batch_report = []
-    # for mcq in physics_mcqs:
-    #     mcq_chunk_ids = mcq.get("source_chunks", [])
-
-    #     report = validator.validate_mcq(
-    #         question=mcq["question"],
-    #         correct_answer=mcq["correct_answer"],
-    #         distractors=mcq["distractors"],
-    #         mcq_chunk_ids=mcq_chunk_ids,
-    #         math_question=mcq.get("math_question"),
-    #         user_answer=mcq.get("user_answer")
-    #     )
-    #     batch_report.append({
-    #         "question": mcq["question"],
-    #         "validation": report
-    #     })                                                                                *
+    # ========================================
+    # FINAL SUMMARY
+    # ========================================
+    print("\n" + "="*80)
+    print("PIPELINE SUMMARY")
+    print("="*80)
     
-    # output_path = Path(MCQ_OUTPUT_DIR / "physics_validation_report_test.json")
-    # validator.save_validation_report(batch_report, output_path)                               *
-
-    # if math_mcqs:
-        # print(f"\nMath Validation:")
-        # print(f"   Pass Rate: {math_report['pass_rate']:.1f}%")
-        # print(f"   Avg Quality: {math_report['average_quality_score']}/100")
+    print("\n📁 Generated Files:")
     
-    print(f"\nFiles Created:")
-    print(f"   - mcq_output/physics_mcqs.json")
-    print(f"   - mcq_output/physics_validation_report.json")
-    print(f"   - mcq_output/math_mcqs.json")
-    print(f"   - mcq_output/math_validation_report.json")
+    if run_generation:
+        print(f"   ✓ MCQs: mcq_output/{subject}_mcqs.json")
+        print(f"   ✓ Validation: mcq_output/{subject}_validation_report.json")
     
-    print("\n" + "="*70)
-    print("PROCESS COMPLETE!")
-    print("="*70)
+    if run_adaptive:
+        print(f"   ✓ Adaptive Results: mcq_output/adaptive_session_results.json")
+    
+    if run_testing:
+        print(f"   ✓ Student Responses: student_responses.json")
+    
+    if run_metrics:
+        print(f"   ✓ Metrics Report: mcq_output/[subject]_metrics_report.json")
+    
+    print("\n" + "="*80)
+    print("✅ PIPELINE COMPLETE!")
+    print("="*80)
+    
+    print("\n💡 Next Steps:")
+    if run_metrics:
+        print("   - Review metrics report for question quality insights")
+        print("   - Identify low-performing MCQs for revision")
+        print("   - Use recommendations to improve future generations")
+    else:
+        print("   - Run student testing (Phase 3) to collect response data")
+        print("   - Calculate pilot metrics (Phase 4) for quality analysis")
+    
+    print("\n" + "="*80 + "\n")
 
 
 if __name__ == "__main__":

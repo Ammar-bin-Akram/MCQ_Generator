@@ -1,0 +1,49 @@
+{
+  "test_metadata": {
+    "num_students": 2,
+    "num_mcqs": 5,
+    "test_date": "2025-11-29 23:45:51",
+    "mcq_source": "mcq_output/adaptive_session_results.json"
+  },
+  "student_scores": [
+    20,
+    40
+  ],
+  "responses": [
+    {
+      "mcq_id": 0,
+      "responses": [
+        true,
+        false
+      ]
+    },
+    {
+      "mcq_id": 1,
+      "responses": [
+        false,
+        true
+      ]
+    },
+    {
+      "mcq_id": 2,
+      "responses": [
+        false,
+        false
+      ]
+    },
+    {
+      "mcq_id": 3,
+      "responses": [
+        false,
+        false
+      ]
+    },
+    {
+      "mcq_id": 4,
+      "responses": [
+        false,
+        true
+      ]
+    }
+  ]
+}

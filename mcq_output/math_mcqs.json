@@ -1,22 +1,103 @@
 [
   {
-    "question": "Which of the following is the correct form of partial fractions for the expression $\\frac{2}{x^2 - 1}$?",
+    "question": "Which of the following statements is TRUE regarding diagonal matrices?",
     "options": {
-      "A": "$\\frac{A}{x-1} + \\frac{B}{x+1}$",
-      "B": "$\\frac{A}{x^2} + \\frac{B}{-1}$",
-      "C": "$\\frac{A}{x} + \\frac{B}{x}$",
-      "D": "$\\frac{A}{x^2 - 1}$"
+      "A": "A diagonal matrix is both an upper triangular and a lower triangular matrix.",
+      "B": "A diagonal matrix is neither an upper triangular nor a lower triangular matrix.",
+      "C": "A diagonal matrix is an upper triangular matrix only if all its diagonal elements are non-zero.",
+      "D": "A diagonal matrix is a lower triangular matrix only if all its diagonal elements are zero."
     },
     "correct_answer": "A",
-    "explanation": "The denominator $x^2 - 1$ can be factored into $(x-1)(x+1)$. Since each factor is linear and non-repeated, the correct form of the partial fraction decomposition is $\\frac{A}{x-1} + \\frac{B}{x+1}$, where A and B are constants to be determined.",
+    "distractors": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "By definition, an upper triangular matrix has all elements below the main diagonal equal to zero, and a lower triangular matrix has all elements above the main diagonal equal to zero. A diagonal matrix has all elements off the main diagonal equal to zero. Therefore, it satisfies both conditions and is both upper and lower triangular. Options B, C, and D are incorrect because they contradict the definition of diagonal, upper triangular, and lower triangular matrices.",
     "difficulty": "easy",
-    "topic": "Resolve the following into partial fractions:",
+    "topic": "Diagonal matrices are both upper triangular and lower triangular.",
     "chapter": "Matrices and Determinants",
     "source_chunks": [
-      "math11_ch4_matrices_and_determinants_chunk_40",
-      "math11_ch7_partial_fractions_chunk_0",
-      "math11_ch4_matrices_and_determinants_chunk_46"
+      "math11_ch4_matrices_and_determinants_chunk_23",
+      "math11_ch4_matrices_and_determinants_chunk_22",
+      "math11_ch4_matrices_and_determinants_chunk_4"
     ],
-    "generated_with": "RAG-Gemini"
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "easy"
+  },
+  {
+    "question": "A straight line is represented by the equation 2x + 3y = 6. What are the x and y intercepts of this line, respectively?",
+    "options": {
+      "A": "3 and 2",
+      "B": "2 and 3",
+      "C": "-3 and -2",
+      "D": "6 and 6"
+    },
+    "correct_answer": "A",
+    "distractors": [
+      "B",
+      "D"
+    ],
+    "explanation": "To find the x-intercept, set y = 0 in the equation 2x + 3y = 6, which gives 2x = 6, so x = 3. To find the y-intercept, set x = 0 in the equation 2x + 3y = 6, which gives 3y = 6, so y = 2. Therefore, the x and y intercepts are 3 and 2, respectively.",
+    "difficulty": "medium",
+    "topic": "Equations",
+    "chapter": "Introduction to Analytic Geometry",
+    "source_chunks": [
+      "math12_ch1_differentiation_chunk_176",
+      "math12_ch4_introduction_to_analytic_geome_chunk_42",
+      "math12_ch5_chapter_chunk_44"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "medium"
+  },
+  {
+    "question": "A straight line *L* passes through the point (2, -1) and is perpendicular to another line whose equation is 3*x* - 2*y* + 6 = 0. Which of the following represents the equation of line *L*?",
+    "options": {
+      "A": "2*x* + 3*y* - 1 = 0",
+      "B": "2*x* - 3*y* - 7 = 0",
+      "C": "3*x* - 2*y* - 8 = 0",
+      "D": "3*x* + 2*y* - 4 = 0"
+    },
+    "correct_answer": "A",
+    "distractors": [
+      "B",
+      "D"
+    ],
+    "explanation": "First, find the slope of the given line 3*x* - 2*y* + 6 = 0. Rewriting it in slope-intercept form (y = mx + c), we get 2*y* = 3*x* + 6, or *y* = (3/2)*x* + 3. Thus, the slope of the given line is 3/2. Since line *L* is perpendicular to this line, its slope is the negative reciprocal of 3/2, which is -2/3. Now, we use the point-slope form of a line, *y* - *y1* = *m*(*x* - *x1*), with the point (2, -1) and slope -2/3. Substituting these values, we get *y* - (-1) = (-2/3)(*x* - 2), which simplifies to *y* + 1 = (-2/3)*x* + 4/3. Multiplying by 3 to eliminate fractions, we have 3*y* + 3 = -2*x* + 4. Rearranging to the general form, we get 2*x* + 3*y* - 1 = 0.",
+    "difficulty": "medium",
+    "topic": "Derivation of Standard Forms of Equations of Straight Lines",
+    "chapter": "Introduction to Analytic Geometry",
+    "source_chunks": [
+      "math12_ch1_differentiation_chunk_160",
+      "math12_ch4_introduction_to_analytic_geome_chunk_26",
+      "math12_ch5_chapter_chunk_28"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "hard"
+  },
+  {
+    "question": "When resolving a rational function $\\frac{P(x)}{Q(x)}$ into partial fractions, if $Q(x)$ contains a non-repeated irreducible quadratic factor of the form $ax^2 + bx + c$, what is the corresponding partial fraction form?",
+    "options": {
+      "A": "$\\frac{Ax + B}{ax^2 + bx + c}$",
+      "B": "$\\frac{A}{ax^2 + bx + c}$",
+      "C": "$\\frac{A}{(ax^2 + bx + c)^2}$",
+      "D": "$\\frac{A}{ax + b}$"
+    },
+    "correct_answer": "A",
+    "distractors": [
+      "B",
+      "D"
+    ],
+    "explanation": "When $Q(x)$ contains a non-repeated irreducible quadratic factor $ax^2 + bx + c$, the corresponding partial fraction is of the form $\\frac{Ax + B}{ax^2 + bx + c}$, where A and B are constants to be determined. This is because the numerator must be a linear expression to account for the quadratic denominator. Option B is incorrect because it only has one constant, A. Option C is associated with the case of repeated irreducible quadratic factors. Option D is associated with linear factors.",
+    "difficulty": "medium",
+    "topic": "Case III: When $Q(x)$ contains non-repeated irreducible quadratic factors",
+    "chapter": "Matrices and Determinants",
+    "source_chunks": [
+      "math11_ch4_matrices_and_determinants_chunk_47",
+      "math11_ch8_exercise_51_chunk_1",
+      "math12_ch1_differentiation_chunk_103"
+    ],
+    "generated_with": "RAG-Gemini",
+    "requested_difficulty": "easy"
   }
 ]

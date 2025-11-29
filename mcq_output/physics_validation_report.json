@@ -1,13 +1,13 @@
 {
-  "total_mcqs": 14,
-  "valid_mcqs": 13,
-  "invalid_mcqs": 1,
-  "pass_rate": 92.85714285714286,
-  "average_quality_score": 91.43,
+  "total_mcqs": 11,
+  "valid_mcqs": 11,
+  "invalid_mcqs": 0,
+  "pass_rate": 100.0,
+  "average_quality_score": 92.73,
   "individual_reports": [
     {
-      "topic": "Half-Wave Rectification",
-      "difficulty": "easy",
+      "topic": "Maximum Power Output",
+      "difficulty": "medium",
       "overall_valid": true,
       "checks": {
         "structure": {
@@ -15,8 +15,9 @@
           "issues": []
         },
         "quality": {
-          "score": 100,
+          "score": 90,
           "feedback": [
+            "Explanation doesn't reference correct answer",
             "Excellent quality!"
           ],
           "passed": true
@@ -27,12 +28,14 @@
         },
         "difficulty_assignment": {
           "valid": true,
-          "issues": []
+          "issues": [
+            "ℹ️  Auto-adjusted from 'easy' to 'medium' based on content"
+          ]
         }
       }
     },
     {
-      "topic": "Photo Diode",
+      "topic": "Electric Field as Potential Gradient",
       "difficulty": "medium",
       "overall_valid": true,
       "checks": {
@@ -58,7 +61,35 @@
       }
     },
     {
-      "topic": "Current Measuring Part of AVO Meter",
+      "topic": "Chemical Effect",
+      "difficulty": "medium",
+      "overall_valid": true,
+      "checks": {
+        "structure": {
+          "valid": true,
+          "issues": []
+        },
+        "quality": {
+          "score": 100,
+          "feedback": [
+            "Excellent quality!"
+          ],
+          "passed": true
+        },
+        "curriculum": {
+          "compliant": true,
+          "issues": []
+        },
+        "difficulty_assignment": {
+          "valid": true,
+          "issues": [
+            "ℹ️  Auto-adjusted from 'easy' to 'medium' based on content"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "Magnetic Effect",
       "difficulty": "hard",
       "overall_valid": true,
       "checks": {
@@ -85,8 +116,8 @@
       }
     },
     {
-      "topic": "Chemical Effect",
-      "difficulty": "easy",
+      "topic": "Using equation 21.5 , we get the mass defect of deuteron as",
+      "difficulty": "hard",
       "overall_valid": true,
       "checks": {
         "structure": {
@@ -94,8 +125,9 @@
           "issues": []
         },
         "quality": {
-          "score": 100,
+          "score": 90,
           "feedback": [
+            "Explanation doesn't reference correct answer",
             "Excellent quality!"
           ],
           "passed": true
@@ -106,29 +138,28 @@
         },
         "difficulty_assignment": {
           "valid": true,
-          "issues": []
+          "issues": [
+            "ℹ️  Auto-adjusted from 'easy' to 'hard' based on content"
+          ]
         }
       }
     },
     {
-      "topic": "Strain",
-      "difficulty": "hard",
-      "overall_valid": false,
+      "topic": "Light Emitting Diode",
+      "difficulty": "easy",
+      "overall_valid": true,
       "checks": {
         "structure": {
           "valid": true,
           "issues": []
         },
         "quality": {
-          "score": 50,
+          "score": 90,
           "feedback": [
-            "Option A too short",
-            "Option B too short",
-            "Option C too short",
-            "Option D too short",
-            "Explanation doesn't reference correct answer"
+            "Explanation doesn't reference correct answer",
+            "Excellent quality!"
           ],
-          "passed": false
+          "passed": true
         },
         "curriculum": {
           "compliant": true,
@@ -137,13 +168,13 @@
         "difficulty_assignment": {
           "valid": true,
           "issues": [
-            "ℹ️  Auto-adjusted from 'medium' to 'hard' based on content"
+            "ℹ️  Auto-adjusted from 'medium' to 'easy' based on content"
           ]
         }
       }
     },
     {
-      "topic": "Strain Energy in Deformed Materials",
+      "topic": "Energy of Alpha and Beta Particles in Radioactive Decay",
       "difficulty": "medium",
       "overall_valid": true,
       "checks": {
@@ -152,8 +183,9 @@
           "issues": []
         },
         "quality": {
-          "score": 100,
+          "score": 90,
           "feedback": [
+            "Explanation doesn't reference correct answer",
             "Excellent quality!"
           ],
           "passed": true
@@ -171,7 +203,89 @@
       }
     },
     {
-      "topic": "RBE factor $=10$",
+      "topic": "Various shapes of transistors.",
+      "difficulty": "easy",
+      "overall_valid": true,
+      "checks": {
+        "structure": {
+          "valid": true,
+          "issues": []
+        },
+        "quality": {
+          "score": 100,
+          "feedback": [
+            "Excellent quality!"
+          ],
+          "passed": true
+        },
+        "curriculum": {
+          "compliant": true,
+          "issues": []
+        },
+        "difficulty_assignment": {
+          "valid": true,
+          "issues": []
+        }
+      }
+    },
+    {
+      "topic": "A squid in use",
+      "difficulty": "medium",
+      "overall_valid": true,
+      "checks": {
+        "structure": {
+          "valid": true,
+          "issues": []
+        },
+        "quality": {
+          "score": 90,
+          "feedback": [
+            "Explanation doesn't reference correct answer",
+            "Excellent quality!"
+          ],
+          "passed": true
+        },
+        "curriculum": {
+          "compliant": true,
+          "issues": []
+        },
+        "difficulty_assignment": {
+          "valid": true,
+          "issues": []
+        }
+      }
+    },
+    {
+      "topic": "Mass Spectrograph",
+      "difficulty": "medium",
+      "overall_valid": true,
+      "checks": {
+        "structure": {
+          "valid": true,
+          "issues": []
+        },
+        "quality": {
+          "score": 90,
+          "feedback": [
+            "Explanation doesn't reference correct answer",
+            "Excellent quality!"
+          ],
+          "passed": true
+        },
+        "curriculum": {
+          "compliant": true,
+          "issues": []
+        },
+        "difficulty_assignment": {
+          "valid": true,
+          "issues": [
+            "ℹ️  Auto-adjusted from 'easy' to 'medium' based on content"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "Vector Representation of an Alternating Quantity",
       "difficulty": "easy",
       "overall_valid": true,
       "checks": {
@@ -193,200 +307,9 @@
         },
         "difficulty_assignment": {
           "valid": true,
-          "issues": []
-        }
-      }
-    },
-    {
-      "topic": "Reverse Biased p-n Junction",
-      "difficulty": "medium",
-      "overall_valid": true,
-      "checks": {
-        "structure": {
-          "valid": true,
-          "issues": []
-        },
-        "quality": {
-          "score": 90,
-          "feedback": [
-            "Explanation doesn't reference correct answer",
-            "Excellent quality!"
-          ],
-          "passed": true
-        },
-        "curriculum": {
-          "compliant": true,
-          "issues": []
-        },
-        "difficulty_assignment": {
-          "valid": true,
-          "issues": []
-        }
-      }
-    },
-    {
-      "topic": "Thermistors",
-      "difficulty": "hard",
-      "overall_valid": true,
-      "checks": {
-        "structure": {
-          "valid": true,
-          "issues": []
-        },
-        "quality": {
-          "score": 100,
-          "feedback": [
-            "Excellent quality!"
-          ],
-          "passed": true
-        },
-        "curriculum": {
-          "compliant": true,
-          "issues": []
-        },
-        "difficulty_assignment": {
-          "valid": true,
-          "issues": []
-        }
-      }
-    },
-    {
-      "topic": "Nuclear Transmutation",
-      "difficulty": "medium",
-      "overall_valid": true,
-      "checks": {
-        "structure": {
-          "valid": true,
-          "issues": []
-        },
-        "quality": {
-          "score": 100,
-          "feedback": [
-            "Excellent quality!"
-          ],
-          "passed": true
-        },
-        "curriculum": {
-          "compliant": true,
-          "issues": []
-        },
-        "difficulty_assignment": {
-          "valid": true,
           "issues": [
-            "ℹ️  Auto-adjusted from 'easy' to 'medium' based on content"
+            "ℹ️  Auto-adjusted from 'medium' to 'easy' based on content"
           ]
-        }
-      }
-    },
-    {
-      "topic": "NaCl crystal lattice",
-      "difficulty": "hard",
-      "overall_valid": true,
-      "checks": {
-        "structure": {
-          "valid": true,
-          "issues": []
-        },
-        "quality": {
-          "score": 90,
-          "feedback": [
-            "Explanation doesn't reference correct answer",
-            "Excellent quality!"
-          ],
-          "passed": true
-        },
-        "curriculum": {
-          "compliant": true,
-          "issues": []
-        },
-        "difficulty_assignment": {
-          "valid": true,
-          "issues": [
-            "ℹ️  Auto-adjusted from 'medium' to 'hard' based on content"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "Ohmmeter",
-      "difficulty": "medium",
-      "overall_valid": true,
-      "checks": {
-        "structure": {
-          "valid": true,
-          "issues": []
-        },
-        "quality": {
-          "score": 90,
-          "feedback": [
-            "Explanation doesn't reference correct answer",
-            "Excellent quality!"
-          ],
-          "passed": true
-        },
-        "curriculum": {
-          "compliant": true,
-          "issues": []
-        },
-        "difficulty_assignment": {
-          "valid": true,
-          "issues": [
-            "ℹ️  Auto-adjusted from 'easy' to 'medium' based on content"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "Uses of CRO",
-      "difficulty": "medium",
-      "overall_valid": true,
-      "checks": {
-        "structure": {
-          "valid": true,
-          "issues": []
-        },
-        "quality": {
-          "score": 90,
-          "feedback": [
-            "Explanation doesn't reference correct answer",
-            "Excellent quality!"
-          ],
-          "passed": true
-        },
-        "curriculum": {
-          "compliant": true,
-          "issues": []
-        },
-        "difficulty_assignment": {
-          "valid": true,
-          "issues": []
-        }
-      }
-    },
-    {
-      "topic": "Photo-Voltaic Cell",
-      "difficulty": "hard",
-      "overall_valid": true,
-      "checks": {
-        "structure": {
-          "valid": true,
-          "issues": []
-        },
-        "quality": {
-          "score": 90,
-          "feedback": [
-            "Explanation doesn't reference correct answer",
-            "Excellent quality!"
-          ],
-          "passed": true
-        },
-        "curriculum": {
-          "compliant": true,
-          "issues": []
-        },
-        "difficulty_assignment": {
-          "valid": true,
-          "issues": []
         }
       }
     }

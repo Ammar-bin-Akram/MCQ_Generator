@@ -1,31 +1,46 @@
-{
-  "total_mcqs": 1,
-  "valid_mcqs": 1,
-  "invalid_mcqs": 0,
-  "pass_rate": 100.0,
-  "average_quality_score": 100.0,
-  "individual_reports": [
-    {
-      "topic": "Resolve the following into partial fractions:",
-      "difficulty": "easy",
-      "overall_valid": true,
-      "checks": {
-        "structure": {
-          "valid": true,
-          "issues": []
-        },
-        "quality": {
-          "score": 100,
-          "feedback": [
-            "Excellent quality!"
-          ],
-          "passed": true
-        },
-        "curriculum": {
-          "compliant": true,
-          "issues": []
-        }
-      }
+[
+  {
+    "question": "Which of the following statements is TRUE regarding diagonal matrices?",
+    "validation": {
+      "question": "Which of the following statements is TRUE regarding diagonal matrices?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
     }
-  ]
-}
+  },
+  {
+    "question": "A straight line is represented by the equation 2x + 3y = 6. What are the x and y intercepts of this line, respectively?",
+    "validation": {
+      "question": "A straight line is represented by the equation 2x + 3y = 6. What are the x and y intercepts of this line, respectively?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "A straight line *L* passes through the point (2, -1) and is perpendicular to another line whose equation is 3*x* - 2*y* + 6 = 0. Which of the following represents the equation of line *L*?",
+    "validation": {
+      "question": "A straight line *L* passes through the point (2, -1) and is perpendicular to another line whose equation is 3*x* - 2*y* + 6 = 0. Which of the following represents the equation of line *L*?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  },
+  {
+    "question": "When resolving a rational function $\\frac{P(x)}{Q(x)}$ into partial fractions, if $Q(x)$ contains a non-repeated irreducible quadratic factor of the form $ax^2 + bx + c$, what is the corresponding partial fraction form?",
+    "validation": {
+      "question": "When resolving a rational function $\\frac{P(x)}{Q(x)}$ into partial fractions, if $Q(x)$ contains a non-repeated irreducible quadratic factor of the form $ax^2 + bx + c$, what is the corresponding partial fraction form?",
+      "unique": true,
+      "distractor_valid": true,
+      "math_valid": null,
+      "citation_valid": true,
+      "overall_valid": true
+    }
+  }
+]
