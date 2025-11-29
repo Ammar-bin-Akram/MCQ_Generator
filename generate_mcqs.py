@@ -19,6 +19,7 @@ import re
 import random
 
 from validation import CurriculumMCQValidator
+from adaptive_module import AdaptiveEngine
 from phy_validation import MCQValidator
 
 load_dotenv()
@@ -32,6 +33,13 @@ MCQ_OUTPUT_DIR.mkdir(exist_ok=True)
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 TOP_K = 3  # Number of chunks to retrieve
 GEMINI_MODEL = "gemini-2.0-flash"  # or "gemini-1.5-flash" for faster responses
+
+
+DIFFICULTY_MAP = {
+        "easy": -1.0,
+        "medium": 0.0,
+        "hard": +1.0
+    }
 
 class RAGMCQGenerator:
     """Generate MCQs using Retrieval-Augmented Generation with Google Gemini"""
@@ -430,6 +438,7 @@ Generate the MCQ now (respond with only the JSON, no additional text):"""
             
             # Parse response
             response_text = response.text
+            print(response_text)
             
             if "```json" in response_text:
                 response_text = response_text.split("```json")[1].split("```")[0].strip()
@@ -636,12 +645,114 @@ Generate the MCQ now (respond with only the JSON, no additional text):"""
         return mcqs
 
 
+    def run_adaptive_session(
+        self,
+        rag_generator,             # your existing MCQ generator class/function
+        num_questions=5,
+        initial_theta=0.0
+    ):
+        """
+        Runs a full adaptive MCQ session using:
+            - theta updates
+            - difficulty control
+            - topic balancing
+
+        rag_generator(topic, difficulty) MUST return dict:
+            {
+                "question": str,
+                "options": { "A": "...", "B": "...", "C": "...", "D": "..." },
+                "correct_answer": "A",
+                "difficulty": "medium",
+                "topic": "...",
+                ... other fields ...
+            }
+        """
+
+        engine = AdaptiveEngine()
+        history = []
+        available_topics = self.load_all_topics_from_blueprint()
+
+        for i in range(num_questions):
+
+            # ------------------------------------------
+            # 1) Decide difficulty + topic using adaptive engine
+            # ------------------------------------------
+            spec = engine.get_next_question_spec(available_topics)
+            topic = spec["topic"]
+            difficulty = spec["difficulty"]
+
+            print(f"\n===============================")
+            print(f" Question {i+1}/{num_questions}")
+            print(f" Topic: {topic}")
+            print(f" Difficulty: {difficulty}")
+            print(f" θ (before): {round(engine.theta, 3)}")
+            print(f"===============================")
+
+            # ------------------------------------------
+            # 2) Generate the MCQ using RAG
+            # ------------------------------------------
+            mcq = rag_generator.generate_mcq(topic, difficulty)
+
+            question_text = mcq["question"]
+            options = mcq["options"]          # dict {"A": "...", "B": "..."}
+            correct_letter = mcq["correct_answer"]
+            correct_text = options[correct_letter]
+
+            # ------------------------------------------
+            # 3) Display question
+            # ------------------------------------------
+            print("\n" + question_text)
+            for key, val in options.items():
+                print(f"{key}. {val}")
+
+            # ------------------------------------------
+            # 4) Take student input
+            # ------------------------------------------
+            user_input = input("\nYour answer (A, B, C, D): ").strip().upper()
+
+            if user_input not in options:
+                print("Invalid answer. Marked incorrect.")
+                user_input = None
+
+            result = 1 if user_input == correct_letter else 0
+
+            if result == 1:
+                print("Correct!")
+            else:
+                print(f"Incorrect. Correct answer: {correct_letter}. {correct_text}")
+
+            # ------------------------------------------
+            # 5) Update θ based on result
+            # ------------------------------------------
+            difficulty_value = DIFFICULTY_MAP[difficulty]
+            new_theta = engine.update_theta(difficulty_value, result)
+
+            print(f"Updated θ = {round(new_theta, 3)}")
+
+            # ------------------------------------------
+            # 6) Save all details to history
+            # ------------------------------------------
+            history.append({
+                "question": question_text,
+                "options": options,
+                "correct_answer": correct_letter,
+                "chosen_answer": user_input,
+                "result": result,
+                "difficulty_requested": difficulty,
+                "topic": topic,
+                "theta_after": new_theta,
+                "mcq_metadata": mcq  # keeps chapter, source_chunks, etc.
+            })
+
+        return history
+    
+
 def main():
     """Main execution with validation for Math and Physics"""
     print("="*70)
     print("MCQ GENERATION & VALIDATION (Math + Physics)")
     print("="*70)
-    
+
     # Initialize RAG system
     generator = RAGMCQGenerator()
     
@@ -653,6 +764,16 @@ def main():
     
     # validator = CurriculumMCQValidator()
     validator = MCQValidator(valid_chunk_ids)
+
+    # adaptive_engine = AdaptiveMCQEngine()
+    results = generator.run_adaptive_session(generator)
+
+    # Save adaptive session results
+    adaptive_output_path = MCQ_OUTPUT_DIR / "adaptive_session_results.json"
+
+    with open(adaptive_output_path, 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+    print(f"\n💾 Saved adaptive session results to {adaptive_output_path}")
     
     # ========== GENERATE PHYSICS MCQs ==========
     
@@ -660,14 +781,14 @@ def main():
     print("PHASE 1: GENERATING PHYSICS MCQs")
     print("="*70)
     
-    physics_mcqs = generator.generate_random_mcqs(
-        num_questions=15,
-        difficulty_mix=True,
-        subject_filter='physics'
-    )
+    # physics_mcqs = generator.generate_random_mcqs(             *
+    #     num_questions=15,
+    #     difficulty_mix=True,
+    #     subject_filter='physics'
+    # )
     
     # Save physics MCQs
-    generator.save_mcqs(physics_mcqs, "physics_mcqs.json")
+    # generator.save_mcqs(physics_mcqs, "physics_mcqs.json")                            *
     
     # Validate physics MCQs
     # if physics_mcqs:
@@ -682,25 +803,25 @@ def main():
 
     # Build mapping: chunk_id -> content
 
-    batch_report = []
-    for mcq in physics_mcqs:
-        mcq_chunk_ids = mcq.get("source_chunks", [])
+    # batch_report = []
+    # for mcq in physics_mcqs:
+    #     mcq_chunk_ids = mcq.get("source_chunks", [])
 
-        report = validator.validate_mcq(
-            question=mcq["question"],
-            correct_answer=mcq["correct_answer"],
-            distractors=mcq["distractors"],
-            mcq_chunk_ids=mcq_chunk_ids,
-            math_question=mcq.get("math_question"),
-            user_answer=mcq.get("user_answer")
-        )
-        batch_report.append({
-            "question": mcq["question"],
-            "validation": report
-        })
+    #     report = validator.validate_mcq(
+    #         question=mcq["question"],
+    #         correct_answer=mcq["correct_answer"],
+    #         distractors=mcq["distractors"],
+    #         mcq_chunk_ids=mcq_chunk_ids,
+    #         math_question=mcq.get("math_question"),
+    #         user_answer=mcq.get("user_answer")
+    #     )
+    #     batch_report.append({
+    #         "question": mcq["question"],
+    #         "validation": report
+    #     })                                                                                *
     
-    output_path = Path(MCQ_OUTPUT_DIR / "physics_validation_report_test.json")
-    validator.save_validation_report(batch_report, output_path)
+    # output_path = Path(MCQ_OUTPUT_DIR / "physics_validation_report_test.json")
+    # validator.save_validation_report(batch_report, output_path)                               *
 
     # if math_mcqs:
         # print(f"\nMath Validation:")

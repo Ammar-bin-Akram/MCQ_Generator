@@ -1,0 +1,202 @@
+[
+  {
+    "question": "A copper wire of length *L* and cross-sectional area *A* has a resistance *R*. If both the length and the radius of the wire are doubled, what will be the new resistance of the wire?",
+    "options": {
+      "A": "R/4",
+      "B": "R/2",
+      "C": "R",
+      "D": "2R"
+    },
+    "correct_answer": "A",
+    "chosen_answer": "B",
+    "result": 0,
+    "difficulty_requested": "medium",
+    "topic": "The resistance $R$ of the wire can be calculated by Eq. 13.2 i.e.,",
+    "theta_after": -0.1,
+    "mcq_metadata": {
+      "question": "A copper wire of length *L* and cross-sectional area *A* has a resistance *R*. If both the length and the radius of the wire are doubled, what will be the new resistance of the wire?",
+      "options": {
+        "A": "R/4",
+        "B": "R/2",
+        "C": "R",
+        "D": "2R"
+      },
+      "correct_answer": "A",
+      "distractors": [
+        "B",
+        "C"
+      ],
+      "explanation": "The resistance R of a wire is given by R = ρL/A, where ρ is the resistivity of the material, L is the length, and A is the cross-sectional area. If the length is doubled (L' = 2L) and the radius is doubled (r' = 2r), the new cross-sectional area becomes A' = π(r')^2 = π(2r)^2 = 4πr^2 = 4A. Therefore, the new resistance R' is given by R' = ρL'/A' = ρ(2L)/(4A) = (1/2)ρL/(2A) = (1/2) * (1/2) * ρL/A = (1/4)R. Therefore, the new resistance is R/4.",
+      "difficulty": "easy",
+      "topic": "The resistance $R$ of the wire can be calculated by Eq. 13.2 i.e.,",
+      "chapter": "Chapter - Chapter Content",
+      "source_chunks": [
+        "phy12_ch12_electrostatics_chunk_32",
+        "phy12_ch2_124_applications_of_electrosta_chunk_24",
+        "phy11_ch19_chapter_chunk_26"
+      ],
+      "generated_with": "RAG-Gemini",
+      "requested_difficulty": "medium"
+    }
+  },
+  {
+    "question": "A steel wire of length 2m and radius 1mm is subjected to a tensile force. If the wire extends by 2mm, what is the tensile strain produced in the wire?",
+    "options": {
+      "A": "0.001",
+      "B": "0.002",
+      "C": "0.004",
+      "D": "0.01"
+    },
+    "correct_answer": "A",
+    "chosen_answer": "B",
+    "result": 0,
+    "difficulty_requested": "medium",
+    "topic": "Strain",
+    "theta_after": -0.19500416250421201,
+    "mcq_metadata": {
+      "question": "A steel wire of length 2m and radius 1mm is subjected to a tensile force. If the wire extends by 2mm, what is the tensile strain produced in the wire?",
+      "options": {
+        "A": "0.001",
+        "B": "0.002",
+        "C": "0.004",
+        "D": "0.01"
+      },
+      "correct_answer": "A",
+      "distractors": [
+        "B",
+        "D"
+      ],
+      "explanation": "Tensile strain is defined as the change in length divided by the original length.  In this case, the change in length (ΔL) is 2mm and the original length (L) is 2m = 2000mm. Therefore, the tensile strain (ε) = ΔL / L = 2mm / 2000mm = 0.001. Option B is incorrect because it uses the change in length as the strain value. Option D is incorrect because it likely comes from dividing the original length by the change in length or incorrectly converting units.",
+      "difficulty": "easy",
+      "topic": "Strain",
+      "chapter": "5.2 MECHANICAL PROPERTIES OF SOLIDS",
+      "source_chunks": [
+        "phy11_ch12_52_mechanical_properties_of_so_chunk_2",
+        "phy11_ch2_force_and_motion_chunk_112",
+        "phy12_ch17_physics_of_solids_chunk_10"
+      ],
+      "generated_with": "RAG-Gemini",
+      "requested_difficulty": "medium"
+    }
+  },
+  {
+    "question": "During the proton-proton (p-p) chain reaction in the Sun, what is the net result in terms of the transformation of protons into helium nuclei?",
+    "options": {
+      "A": "Four protons combine to form one helium nucleus, releasing approximately 25.7 MeV of energy.",
+      "B": "Two protons combine to form one helium nucleus, releasing approximately 25.7 MeV of energy.",
+      "C": "Six protons combine to form one helium nucleus and two protons, releasing approximately 1 MeV of energy.",
+      "D": "Two deuterons combine to form one helium nucleus, releasing approximately 6.4 MeV of energy."
+    },
+    "correct_answer": "A",
+    "chosen_answer": "A",
+    "result": 1,
+    "difficulty_requested": "medium",
+    "topic": "SUNMARY",
+    "theta_after": -0.08528473462843508,
+    "mcq_metadata": {
+      "question": "During the proton-proton (p-p) chain reaction in the Sun, what is the net result in terms of the transformation of protons into helium nuclei?",
+      "options": {
+        "A": "Four protons combine to form one helium nucleus, releasing approximately 25.7 MeV of energy.",
+        "B": "Two protons combine to form one helium nucleus, releasing approximately 25.7 MeV of energy.",
+        "C": "Six protons combine to form one helium nucleus and two protons, releasing approximately 1 MeV of energy.",
+        "D": "Two deuterons combine to form one helium nucleus, releasing approximately 6.4 MeV of energy."
+      },
+      "correct_answer": "A",
+      "distractors": [
+        "B",
+        "D"
+      ],
+      "explanation": "The p-p chain reaction in the Sun involves a series of steps, but the net result is that four protons fuse to form one helium nucleus. In the process, approximately 25.7 MeV of energy is released. Option B is incorrect because it states that only two protons combine. Option C is incorrect because although six protons take part in the reaction two protons are ultimately produced. Option D is incorrect as deuterons are intermediate products and not the initial reactants.",
+      "difficulty": "medium",
+      "topic": "SUNMARY",
+      "chapter": "Nuclear Physics",
+      "source_chunks": [
+        "phy12_ch12_from_alpha-particles_scatterin_chunk_37",
+        "phy12_ch21_nuclear_physics_chunk_39",
+        "phy11_ch2_force_and_motion_chunk_60"
+      ],
+      "generated_with": "RAG-Gemini",
+      "requested_difficulty": "medium"
+    }
+  },
+  {
+    "question": "An R-L series circuit has a resistance of 30 Ω and an inductive reactance of 40 Ω at a particular frequency. If the applied RMS voltage is 250 V, what is the RMS current flowing through the circuit?",
+    "options": {
+      "A": "5 A",
+      "B": "6.25 A",
+      "C": "8.33 A",
+      "D": "10 A"
+    },
+    "correct_answer": "A",
+    "chosen_answer": "D",
+    "result": 0,
+    "difficulty_requested": "medium",
+    "topic": "IMPEDANCE",
+    "theta_after": -0.18102308067395032,
+    "mcq_metadata": {
+      "question": "An R-L series circuit has a resistance of 30 Ω and an inductive reactance of 40 Ω at a particular frequency. If the applied RMS voltage is 250 V, what is the RMS current flowing through the circuit?",
+      "options": {
+        "A": "5 A",
+        "B": "6.25 A",
+        "C": "8.33 A",
+        "D": "10 A"
+      },
+      "correct_answer": "A",
+      "distractors": [
+        "B",
+        "C"
+      ],
+      "explanation": "First, calculate the impedance (Z) of the R-L series circuit using the formula: Z = √(R² + X_L²), where R is the resistance and X_L is the inductive reactance.\n\nZ = √(30² + 40²) = √(900 + 1600) = √2500 = 50 Ω\n\nNext, use Ohm's Law for AC circuits to find the RMS current (I_rms): I_rms = V_rms / Z, where V_rms is the RMS voltage.\n\nI_rms = 250 V / 50 Ω = 5 A\n\nTherefore, the RMS current flowing through the circuit is 5 A.",
+      "difficulty": "easy",
+      "topic": "IMPEDANCE",
+      "chapter": "ALTERNATING CURRENT",
+      "source_chunks": [
+        "phy12_ch16_alternating_current_chunk_14",
+        "phy12_ch6_chapter_16_chunk_15",
+        "phy12_ch16_alternating_current_chunk_12"
+      ],
+      "generated_with": "RAG-Gemini",
+      "requested_difficulty": "medium"
+    }
+  },
+  {
+    "question": "In a transistor amplifier circuit, if a small change in input voltage, \\(\\Delta V_{in}\\), results in a change in output voltage, \\(\\Delta V_{out}\\), and given that the collector resistance is \\(R_c\\), the base-emitter resistance is \\(r_w\\), and the transistor's current gain is \\(\\beta\\), what is the voltage gain (A) of the amplifier?",
+    "options": {
+      "A": "A = -\\(\\beta R_c / r_w\\)",
+      "B": "A = \\(\\beta r_w / R_c\\)",
+      "C": "A = \\(\\beta R_c + r_w\\)",
+      "D": "A = -\\(\\beta r_w / R_c\\)"
+    },
+    "correct_answer": "A",
+    "chosen_answer": "A",
+    "result": 1,
+    "difficulty_requested": "medium",
+    "topic": "TRANSISTOR AS AN AMPLIFIER",
+    "theta_after": -0.07199656262007884,
+    "mcq_metadata": {
+      "question": "In a transistor amplifier circuit, if a small change in input voltage, \\(\\Delta V_{in}\\), results in a change in output voltage, \\(\\Delta V_{out}\\), and given that the collector resistance is \\(R_c\\), the base-emitter resistance is \\(r_w\\), and the transistor's current gain is \\(\\beta\\), what is the voltage gain (A) of the amplifier?",
+      "options": {
+        "A": "A = -\\(\\beta R_c / r_w\\)",
+        "B": "A = \\(\\beta r_w / R_c\\)",
+        "C": "A = \\(\\beta R_c + r_w\\)",
+        "D": "A = -\\(\\beta r_w / R_c\\)"
+      },
+      "correct_answer": "A",
+      "distractors": [
+        "B",
+        "D"
+      ],
+      "explanation": "The voltage gain (A) of the amplifier is defined as the ratio of the change in output voltage to the change in input voltage, i.e., A = \\(\\Delta V_{out} / \\Delta V_{in}\\). From the provided text, we have the equation \\(\\Delta V_{out} = -\\beta \\Delta V_{in} R_c / r_w\\). Dividing both sides by \\(\\Delta V_{in}\\) gives us A = \\(\\Delta V_{out} / \\Delta V_{in} = -\\beta R_c / r_w\\). The negative sign indicates a 180-degree phase shift between the input and output signals.",
+      "difficulty": "hard",
+      "topic": "TRANSISTOR AS AN AMPLIFIER",
+      "chapter": "ELECTRONICS",
+      "source_chunks": [
+        "phy12_ch18_electronics_chunk_11",
+        "phy12_ch8_chapter_18_chunk_12",
+        "phy12_ch18_electronics_chunk_12"
+      ],
+      "generated_with": "RAG-Gemini",
+      "requested_difficulty": "medium"
+    }
+  }
+]
