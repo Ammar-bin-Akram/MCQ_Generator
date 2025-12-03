@@ -269,19 +269,19 @@ if __name__ == "__main__":
         elif choice == '4':
             mcq_file = input("Enter MCQ file path: ").strip()
         else:
-            print("❌ Invalid choice. Using default: mcq_output/physics_mcqs.json")
+            print("Invalid choice. Using default: mcq_output/physics_mcqs.json")
             mcq_file = 'mcq_output/physics_mcqs.json'
         
         # Check file exists
         if not Path(mcq_file).exists():
-            print(f"❌ File not found: {mcq_file}")
+            print(f"File not found: {mcq_file}")
             sys.exit(1)
         
         # Get number of students
         num_students = int(input("\nHow many students will take the test? ").strip())
         
         if num_students < 1:
-            print("❌ Number of students must be at least 1")
+            print("Number of students must be at least 1")
             sys.exit(1)
         
         # Conduct the test

@@ -18,7 +18,6 @@ from typing import List, Dict
 import re
 import random
 
-from validation import CurriculumMCQValidator
 from adaptive_module import AdaptiveEngine
 from phy_validation import MCQValidator
 from conduct_test import conduct_test, quick_test_mode
@@ -802,30 +801,20 @@ def main():
         )
         
         if physics_mcqs:
-            # Save MCQs
             output_file = f"{subject}_mcqs.json"
             generator.save_mcqs(physics_mcqs, output_file)
-            
-            # Validate
+
             print("\n" + "="*80)
             print(f"VALIDATING {subject.upper()} MCQs")
             print("="*80)
-            
-            batch_report = []
-            for mcq in physics_mcqs:
-                mcq_chunk_ids = mcq.get("source_chunks", [])
-                report = validator.validate_mcq(
-                    question=mcq["question"],
-                    correct_answer=mcq["correct_answer"],
-                    distractors=mcq.get("distractors", []),
-                    mcq_chunk_ids=mcq_chunk_ids,
-                    math_question=mcq.get("math_question"),
-                    user_answer=mcq.get("user_answer")
-                )
-                batch_report.append({
-                    "question": mcq["question"],
-                    "validation": report
-                })
+
+            batch_report = validator.validate_batch(physics_mcqs)
+
+            validation_output = MCQ_OUTPUT_DIR / f"{subject}_validation_report.json"
+            validator.save_validation_report(batch_report, validation_output)
+
+            print(f"\n✅ Generated and validated {len(physics_mcqs)} MCQs")
+
             
             validation_output = MCQ_OUTPUT_DIR / f"{subject}_validation_report.json"
             validator.save_validation_report(batch_report, validation_output)
@@ -926,7 +915,7 @@ def main():
         response_file = 'student_responses.json'
         
         if not Path(response_file).exists():
-            print(f"\n⚠️  Response file not found: {response_file}")
+            print(f"\n   Response file not found: {response_file}")
             print("   Please run student testing first (Phase 3)")
         else:
             # Calculate metrics

@@ -1,46 +1,125 @@
-[
-  {
-    "question": "Which of the following statements is TRUE regarding diagonal matrices?",
-    "validation": {
-      "question": "Which of the following statements is TRUE regarding diagonal matrices?",
-      "unique": true,
-      "distractor_valid": true,
-      "math_valid": null,
-      "citation_valid": true,
-      "overall_valid": true
+{
+  "total_mcqs": 9,
+  "valid_mcqs": 9,
+  "invalid_mcqs": 0,
+  "pass_rate": 100.0,
+  "results": [
+    {
+      "question": "Which of the following statements regarding equations and identities is most accurate, based on the provided context?",
+      "report": {
+        "question": "Which of the following statements regarding equations and identities is most accurate, based on the provided context?",
+        "structure_valid": true,
+        "structure_issues": [],
+        "unique": true,
+        "distractor_valid": true,
+        "math_valid": null,
+        "citation_valid": true,
+        "overall_valid": true
+      }
+    },
+    {
+      "question": "Consider the rational function $\\frac{P(x)}{Q(x)}$, where $Q(x) = (x^2 + 4)(x-1)$. If $P(x)$ is a polynomial such that the degree of $P(x)$ is less than the degree of $Q(x)$, which of the following partial fraction decompositions is the MOST appropriate form?",
+      "report": {
+        "question": "Consider the rational function $\\frac{P(x)}{Q(x)}$, where $Q(x) = (x^2 + 4)(x-1)$. If $P(x)$ is a polynomial such that the degree of $P(x)$ is less than the degree of $Q(x)$, which of the following partial fraction decompositions is the MOST appropriate form?",
+        "structure_valid": true,
+        "structure_issues": [],
+        "unique": true,
+        "distractor_valid": true,
+        "math_valid": null,
+        "citation_valid": true,
+        "overall_valid": true
+      }
+    },
+    {
+      "question": "In the intercept form of a linear equation, \\(\\frac{x}{a} + \\frac{y}{b} = 1\\), what do 'a' and 'b' represent?",
+      "report": {
+        "question": "In the intercept form of a linear equation, \\(\\frac{x}{a} + \\frac{y}{b} = 1\\), what do 'a' and 'b' represent?",
+        "structure_valid": true,
+        "structure_issues": [],
+        "unique": true,
+        "distractor_valid": true,
+        "math_valid": null,
+        "citation_valid": true,
+        "overall_valid": true
+      }
+    },
+    {
+      "question": "A stock is currently valued at Rs. 8,000 and is expected to grow at a continuous rate of 8% per year. According to the exponential growth model \\(P(t) = P_0 e^{rt}\\), approximately how many years will it take for the stock to triple in value?",
+      "report": {
+        "question": "A stock is currently valued at Rs. 8,000 and is expected to grow at a continuous rate of 8% per year. According to the exponential growth model \\(P(t) = P_0 e^{rt}\\), approximately how many years will it take for the stock to triple in value?",
+        "structure_valid": true,
+        "structure_issues": [],
+        "unique": true,
+        "distractor_valid": true,
+        "math_valid": null,
+        "citation_valid": true,
+        "overall_valid": true
+      }
+    },
+    {
+      "question": "A parabolic reflector is designed such that a point source of light is placed at its focus. A ray of light emanating from the focus strikes the parabola at a point P(x, y). Let PR be the reflected ray, which is parallel to the axis of the parabola. If the equation of the parabola is \\(y^2 = 8x\\), and the point P has a y-coordinate of 4, what is the angle between the incident ray FP and the reflected ray PR?",
+      "report": {
+        "question": "A parabolic reflector is designed such that a point source of light is placed at its focus. A ray of light emanating from the focus strikes the parabola at a point P(x, y). Let PR be the reflected ray, which is parallel to the axis of the parabola. If the equation of the parabola is \\(y^2 = 8x\\), and the point P has a y-coordinate of 4, what is the angle between the incident ray FP and the reflected ray PR?",
+        "structure_valid": true,
+        "structure_issues": [],
+        "unique": true,
+        "distractor_valid": true,
+        "math_valid": null,
+        "citation_valid": true,
+        "overall_valid": true
+      }
+    },
+    {
+      "question": "What is the first step in solving the rational equation:  $\\frac{2}{x} + \\frac{1}{x-2} = 1$, where $x \\neq 0, 2$?",
+      "report": {
+        "question": "What is the first step in solving the rational equation:  $\\frac{2}{x} + \\frac{1}{x-2} = 1$, where $x \\neq 0, 2$?",
+        "structure_valid": true,
+        "structure_issues": [],
+        "unique": true,
+        "distractor_valid": true,
+        "math_valid": null,
+        "citation_valid": true,
+        "overall_valid": true
+      }
+    },
+    {
+      "question": "For what value(s) of 'c' will the line y = x + c be tangent to the circle x² + y² = 8?",
+      "report": {
+        "question": "For what value(s) of 'c' will the line y = x + c be tangent to the circle x² + y² = 8?",
+        "structure_valid": true,
+        "structure_issues": [],
+        "unique": true,
+        "distractor_valid": true,
+        "math_valid": null,
+        "citation_valid": true,
+        "overall_valid": true
+      }
+    },
+    {
+      "question": "A straight line *L* passes through the point (2, -3) and is perpendicular to another line whose equation is given by 3*x* - 4*y* + 7 = 0. If the equation of line *L* is expressed in the form *y* = *mx* + *c*, what is the value of *c*?",
+      "report": {
+        "question": "A straight line *L* passes through the point (2, -3) and is perpendicular to another line whose equation is given by 3*x* - 4*y* + 7 = 0. If the equation of line *L* is expressed in the form *y* = *mx* + *c*, what is the value of *c*?",
+        "structure_valid": true,
+        "structure_issues": [],
+        "unique": true,
+        "distractor_valid": true,
+        "math_valid": null,
+        "citation_valid": true,
+        "overall_valid": true
+      }
+    },
+    {
+      "question": "A rectangular garden has a length that is 5 meters longer than its width. If the area of the garden is 84 square meters, what is the width of the garden?",
+      "report": {
+        "question": "A rectangular garden has a length that is 5 meters longer than its width. If the area of the garden is 84 square meters, what is the width of the garden?",
+        "structure_valid": true,
+        "structure_issues": [],
+        "unique": true,
+        "distractor_valid": true,
+        "math_valid": null,
+        "citation_valid": true,
+        "overall_valid": true
+      }
     }
-  },
-  {
-    "question": "A straight line is represented by the equation 2x + 3y = 6. What are the x and y intercepts of this line, respectively?",
-    "validation": {
-      "question": "A straight line is represented by the equation 2x + 3y = 6. What are the x and y intercepts of this line, respectively?",
-      "unique": true,
-      "distractor_valid": true,
-      "math_valid": null,
-      "citation_valid": true,
-      "overall_valid": true
-    }
-  },
-  {
-    "question": "A straight line *L* passes through the point (2, -1) and is perpendicular to another line whose equation is 3*x* - 2*y* + 6 = 0. Which of the following represents the equation of line *L*?",
-    "validation": {
-      "question": "A straight line *L* passes through the point (2, -1) and is perpendicular to another line whose equation is 3*x* - 2*y* + 6 = 0. Which of the following represents the equation of line *L*?",
-      "unique": true,
-      "distractor_valid": true,
-      "math_valid": null,
-      "citation_valid": true,
-      "overall_valid": true
-    }
-  },
-  {
-    "question": "When resolving a rational function $\\frac{P(x)}{Q(x)}$ into partial fractions, if $Q(x)$ contains a non-repeated irreducible quadratic factor of the form $ax^2 + bx + c$, what is the corresponding partial fraction form?",
-    "validation": {
-      "question": "When resolving a rational function $\\frac{P(x)}{Q(x)}$ into partial fractions, if $Q(x)$ contains a non-repeated irreducible quadratic factor of the form $ax^2 + bx + c$, what is the corresponding partial fraction form?",
-      "unique": true,
-      "distractor_valid": true,
-      "math_valid": null,
-      "citation_valid": true,
-      "overall_valid": true
-    }
-  }
-]
+  ]
+}

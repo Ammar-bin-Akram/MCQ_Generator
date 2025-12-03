@@ -362,7 +362,7 @@ if __name__ == "__main__":
     if mcq_file.exists():
         validate_mcq_file(
             str(mcq_file),
-            "mcq_output/sat/validation_report.json"
+            "mcq_output/sat/sat_validation_report.json"
         )
     else:
         print(f"❌ MCQ file not found: {mcq_file}")
