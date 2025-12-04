@@ -358,12 +358,13 @@ class RAGMCQGenerator:
 **Requirements:**
 1. Create a clear, unambiguous question
 2. Provide 4 options (A, B, C, D)
-3. Mark the correct answer
-4. Provide a detailed explanation
-5. Ensure the question tests understanding, not just memorization
-6. Use proper mathematical notation where needed
-7. Make distractors (wrong answers) plausible but clearly incorrect
-8. Add one or multiple distractors that are meant to confuse students
+3. Randomly assign the correct answer to one of the options
+4. Mark the correct answer
+5. Provide a detailed explanation
+6. Ensure the question tests understanding, not just memorization
+7. Use proper mathematical notation where needed
+8. Make distractors (wrong answers) plausible but clearly incorrect
+9. Add one or multiple distractors that are meant to confuse students
 
 **Output Format (JSON only, no markdown):**
 {{
@@ -374,7 +375,7 @@ class RAGMCQGenerator:
         "C": "Option C text",
         "D": "Option D text"
     }},
-    "correct_answer": "A",
+    "correct_answer": "Correct option letter (A/B/C/D)",
     "distractors": ["B", "C"],
     "explanation": "Detailed explanation of why the answer is correct",
     "difficulty": "{difficulty}",
@@ -386,7 +387,7 @@ Generate the MCQ now (respond with only the JSON, no additional text):"""
         
         return prompt
     
-    def generate_mcq(self, topic: str, difficulty: str = None, subject: str = None) -> Dict:
+    def generate_mcq(self, topic: str, difficulty: str = None, subject: str = None, max_attempts: int = 3) -> Dict:
         """
         Generate a single MCQ for a given topic
         
@@ -398,6 +399,7 @@ Generate the MCQ now (respond with only the JSON, no additional text):"""
         Returns:
             Generated MCQ as dictionary
         """
+
         # Use medium as default for generation prompt
         requested_difficulty = difficulty if difficulty else "medium"
         
@@ -424,50 +426,56 @@ Generate the MCQ now (respond with only the JSON, no additional text):"""
         prompt = self.generate_mcq_prompt(chunks, topic, requested_difficulty)
         
         # Call Gemini API
-        print(f"   🤖 Generating MCQ with Gemini...")
-        try:
-            generation_config = {
-                "temperature": 0.7,
-                "top_p": 0.95,
-                "top_k": 40,
-                "max_output_tokens": 2048,
-            }
-            
-            response = self.model.generate_content(
-                prompt,
-                generation_config=generation_config
-            )
-            
-            # Parse response
-            response_text = response.text
-            # print(response_text)
-            
-            if "```json" in response_text:
-                response_text = response_text.split("```json")[1].split("```")[0].strip()
-            elif "```" in response_text:
-                response_text = response_text.split("```")[1].split("```")[0].strip()
-            
-            mcq = json.loads(response_text)
-            
-            # ✅ CALCULATE ACTUAL DIFFICULTY BASED ON CONTENT
-            calculated_difficulty = self.estimate_difficulty(mcq)
-            
-            # Add metadata
-            mcq['source_chunks'] = [chunk['chunk_id'] for chunk in chunks[:3]]
-            mcq['generated_with'] = 'RAG-Gemini'
-            mcq['requested_difficulty'] = requested_difficulty  # What we asked for
-            mcq['difficulty'] = calculated_difficulty  # What it actually is
-            
-            # Show if there's a mismatch
-            if calculated_difficulty != requested_difficulty:
-                print(f"   i  Difficulty adjusted: {requested_difficulty} → {calculated_difficulty}")
-            
-            print(f"   ✅ MCQ generated - Difficulty: {calculated_difficulty}")
-            return mcq
-            
-        except Exception as e:
-            print(f"   ❌ Error generating MCQ: {str(e)}")
-            return None
+        attempt = 0
+        while attempt < max_attempts:
+            print(f"   🤖 Generating MCQ with Gemini...")
+            try:
+                generation_config = {
+                    "temperature": 0.7,
+                    "top_p": 0.95,
+                    "top_k": 40,
+                    "max_output_tokens": 2048,
+                }
+                
+                response = self.model.generate_content(
+                    prompt,
+                    generation_config=generation_config
+                )
+                
+                # Parse response
+                response_text = response.text
+                print(response_text)
+                
+                if "```json" in response_text:
+                    response_text = response_text.split("```json")[1].split("```")[0].strip()
+                elif "```" in response_text:
+                    response_text = response_text.split("```")[1].split("```")[0].strip()
+                
+                mcq = json.loads(response_text)
+                
+                # ✅ CALCULATE ACTUAL DIFFICULTY BASED ON CONTENT
+                calculated_difficulty = self.estimate_difficulty(mcq)
+                
+                # Add metadata
+                mcq['source_chunks'] = [chunk['chunk_id'] for chunk in chunks[:3]]
+                mcq['generated_with'] = 'RAG-Gemini'
+                mcq['requested_difficulty'] = requested_difficulty  # What we asked for
+                mcq['difficulty'] = calculated_difficulty  # What it actually is
+                
+                # Show if there's a mismatch
+                if calculated_difficulty != requested_difficulty:
+                    print(f"   i  Difficulty adjusted: {requested_difficulty} → {calculated_difficulty}")
+                
+                print(f"   ✅ MCQ generated - Difficulty: {calculated_difficulty}")
+                return mcq
+                
+            except Exception as e:
+                if "Invalid \\escape" in str(e) or "Invalid \escape" in str(e):
+                    print(f"❌ Error generating MCQ (attempt {attempt+1}): {e}")
+                    attempt += 1
+                    
+                else:
+                    raise RuntimeError(f"Failed to generate MCQ for topic '{topic}' after {max_attempts} attempts due to Invalid \\escape error.")
     
     def generate_batch_mcqs(self, topics: List[str], num_per_topic: int = 3, 
                            difficulty_mix: bool = True) -> List[Dict]:
