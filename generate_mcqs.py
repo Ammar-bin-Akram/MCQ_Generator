@@ -748,6 +748,14 @@ Generate the MCQ now (respond with only the JSON, no additional text):"""
 
         return history
     
+    def generate_adaptive_mcq(self, topic, difficulty):
+        mcq = self.generate_mcq(topic, difficulty)
+
+        # Ensure these two fields exist
+        mcq["difficulty"] = difficulty
+        mcq["topic"] = topic
+
+        return mcq
 
 def main():
     """
